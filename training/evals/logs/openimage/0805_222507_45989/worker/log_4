@@ -1,0 +1,2232 @@
+2021-08-05:22:25:49,183 INFO     [learner.py:14] End up with cuda device tensor([0.2469], device='cuda:6')
+2021-08-05:22:25:49,185 INFO     [learner.py:42] ===== Experiment start on : dev-intel16-k80=====
+2021-08-05:22:25:49,591 INFO     [learner.py:710] ====Start to initialize dataset
+2021-08-05:22:25:49,592 INFO     [flLibs.py:59] ====Initialize the model
+2021-08-05:22:25:53,841 INFO     [learner.py:733] ==== Starting training data partitioner =====
+2021-08-05:22:25:54,196 INFO     [divide_data.py:95] ====Initiating DataPartitioner takes 0.3535451889038086 s
+
+2021-08-05:22:25:54,197 INFO     [learner.py:736] ==== Finished training data partitioner =====
+2021-08-05:22:25:54,998 INFO     [divide_data.py:367] ========= Start of Random Partition =========
+
+2021-08-05:22:25:56,917 INFO     [divide_data.py:380] ====Try to remove clients w/ less than 30 samples, and remove 257583 samples
+2021-08-05:22:25:59,472 INFO     [divide_data.py:490] Raw class per worker is : array([[2780., 2095., 1359., ...,   60.,   60.,   58.],
+       [2806., 2112., 1319., ...,   69.,   58.,   75.],
+       [2793., 2096., 1334., ...,   75.,   58.,   70.],
+       ...,
+       [2859., 2195., 1293., ...,   66.,   63.,   62.],
+       [2849., 2147., 1362., ...,   57.,   68.,   78.],
+       [2723., 2164., 1318., ...,   53.,   56.,   73.]])
+
+2021-08-05:22:25:59,473 INFO     [divide_data.py:491] ========= End of Class/Worker =========
+
+2021-08-05:22:26:00,233 INFO     [learner.py:749] ==== Starting testing data partitioner =====
+2021-08-05:22:26:00,271 INFO     [divide_data.py:95] ====Initiating DataPartitioner takes 0.03626394271850586 s
+
+2021-08-05:22:26:00,271 INFO     [learner.py:751] ==== Finished testing data partitioner =====
+2021-08-05:22:26:00,359 INFO     [divide_data.py:367] ========= Start of Random Partition =========
+
+2021-08-05:22:26:00,722 INFO     [divide_data.py:490] Raw class per worker is : array([[1069., 1353., 1211.,  844.,  277., 2170.,  393.,  647.,   67.,
+         681., 1466., 1631.,  870.,   82.,  951., 1398.,  407., 1056.,
+          31., 1749.,  130.,  426.,   74.,  393.,  107.,  204.,   87.,
+          41.,  720.,  492.,  524.,   30.,  488.,  305.,  273.,   70.,
+         112.,  195.,   15.,   11.,  376.,  109.,   72.,  207.,   43.,
+          67.,  493.,  380.,  308.,   14.,   46.,  155.,   66.,  673.,
+         152.,  295.,   40.,  672.,   91.,   70.],
+       [1079., 1393., 1238.,  879.,  263., 2065.,  383.,  692.,   72.,
+         653., 1490., 1630.,  823.,   72.,  950., 1315.,  414., 1060.,
+          30., 1739.,  152.,  422.,   77.,  396.,  115.,  238.,   70.,
+          37.,  692.,  485.,  521.,   39.,  493.,  307.,  271.,   61.,
+         131.,  234.,   11.,   12.,  348.,  125.,   58.,  203.,   52.,
+          61.,  464.,  410.,  291.,   17.,   44.,  141.,   61.,  697.,
+         162.,  267.,   53.,  750.,   94.,   77.],
+       [1108., 1447., 1266.,  815.,  278., 2073.,  364.,  648.,   70.,
+         656., 1538., 1674.,  852.,  102.,  972., 1350.,  400., 1040.,
+          27., 1688.,  144.,  448.,   96.,  377.,  125.,  219.,   83.,
+          33.,  756.,  481.,  482.,   38.,  523.,  280.,  287.,   57.,
+          87.,  213.,   17.,   19.,  338.,  103.,   52.,  187.,   52.,
+          57.,  468.,  371.,  265.,   25.,   36.,  141.,   66.,  746.,
+         162.,  283.,   54.,  683.,   84.,   73.],
+       [1022., 1339., 1206.,  830.,  285., 2154.,  381.,  682.,   69.,
+         644., 1539., 1698.,  765.,  115., 1071., 1308.,  428., 1067.,
+          32., 1770.,  114.,  434.,   69.,  433.,  115.,  204.,   72.,
+          36.,  721.,  463.,  523.,   34.,  478.,  329.,  248.,   37.,
+         125.,  211.,   13.,   11.,  336.,   99.,   73.,  189.,   62.,
+          62.,  453.,  413.,  260.,   14.,   64.,  136.,   56.,  728.,
+         165.,  299.,   51.,  694.,   76.,   74.],
+       [1082., 1401., 1258.,  835.,  274., 2127.,  427.,  727.,   57.,
+         635., 1535., 1712.,  801.,  113.,  971., 1295.,  419., 1009.,
+          30., 1758.,  126.,  394.,   72.,  436.,  122.,  209.,   85.,
+          30.,  684.,  486.,  489.,   38.,  524.,  303.,  271.,   53.,
+          91.,  210.,   14.,   10.,  328.,  117.,   51.,  214.,   50.,
+          72.,  461.,  368.,  299.,   22.,   47.,  142.,   77.,  702.,
+         167.,  279.,   50.,  657.,   81.,   82.]])
+
+2021-08-05:22:26:00,725 INFO     [divide_data.py:491] ========= End of Class/Worker =========
+
+2021-08-05:22:26:00,745 INFO     [learner.py:446] ====Worker: Start running
+2021-08-05:22:26:01,181 INFO     [learner.py:484] 
+Namespace(adam_epsilon=1e-08, backend='nccl', batch_size=16, bidirectional=True, blacklist_max_len=0.3, blacklist_rounds=-1, block_size=64, cache_dir=None, capacity_bin=True, clf_block_size=100, client_path='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/data/device_info/client_device_capacity', clip_bound=0.98, clock_factor=2.906137184115524, conf_path='~/dataset/', config_name=None, cut_off_util=0.7, data_dir='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/open_images', data_mapfile='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/open_images/clientDataMap', data_set='openImg', decay_epoch=5, decay_factor=0.95, display_step=20, do_eval=False, do_train=False, dropout_ratio=0.1, dump_epoch=1000, duplicate_data=1, enable_adapt_local_epoch=False, enable_dropout=False, enable_importance=False, enable_obs_client=False, enable_obs_importance=False, enable_obs_local_epoch=False, enforce_random=True, epochs=500, eval_all_checkpoints=False, eval_data_file='', eval_interval=10, eval_interval_prior=9999999, evaluate_during_training=False, exploration_alpha=0.3, exploration_decay=0.95, exploration_factor=0.9, exploration_min=0.2, filter_class=0, filter_less=30, filter_more=100000.0, finetune=False, fixed_clients=False, force_read=False, forward_pass=False, fp16=False, fp16_opt_level='O1', full_gradient_interval=20, gpu_device=6, gradient_accumulation_steps=1, gradient_policy='yogi', hetero_allocation='1.0-1.0-1.0-1.0-1.0-1.0', heterogeneity=1.0, hidden_layers=7, hidden_size=256, input_dim=0, is_even_avg=True, job_name='openimage', labels_path='labels.json', learners='1-2-3-4-5', learning_rate=0.04, line_by_line=False, load_epoch=1, load_model=False, load_time_stamp='0615_194942', local_rank=-1, log_path='/mnt/home/lichenni/projects/Oort/training/evals', logging_steps=500, loss_decay=0.2, malicious_clients=0, manager_port=39891, max_grad_norm=1.0, max_iter_store=100, max_steps=-1, min_learning_rate=0.0001, mlm=True, mlm_probability=0.1, model='shufflenet_v2_x2_0', model_avg=True, model_name_or_path=None, model_path=None, model_size=65536, model_type='', no_cuda=False, noise_dir=None, noise_factor=0, noise_max=0.5, noise_min=0.0, noise_prob=0.4, num_class=60, num_loaders=2, num_train_epochs=1.0, output_dim=0, output_dir=None, overcommit=1.3, overwrite_cache=False, overwrite_output_dir=False, pacer_delta=10.0, pacer_step=20, per_gpu_eval_batch_size=4, per_gpu_train_batch_size=4, proxy_avg=False, proxy_mu=0.1, ps_ip='dev-intel16-k80', ps_port='22785', read_models_path=False, release_cache=False, resampling_interval=1, rnn_type='lstm', round_penalty=2.0, round_threshold=10, run_all=False, sample_mode='random', sample_rate=16000, sample_seed=233, sample_window=5.0, sampler_path=None, save_path='./', save_steps=500, save_total_limit=None, score_mode='loss', seed=42, sequential='0', server_ip='', server_port='', should_continue=False, single_sim=0, skip_partition=False, sleep_up=0, spec_augment=False, speed_volume_perturb=False, stale_threshold=0, task='cv', test_bsz=256, test_interval=20, test_manifest='data/test_manifest.csv', test_only=False, test_ratio=1.0, test_train_data=False, this_rank=4, threads=4, time_stamp='0805_222507_45989', timeout=9999999, to_device='cuda', tokenizer_name=None, total_worker=50, train_data_file='', train_manifest='data/train_manifest.csv', upload_epoch=10, user_trace='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/data/device_info/client_behave_trace', validate_interval=999999, vocab_tag_size=500, vocab_token_size=10000, warmup_steps=0, weight_decay=0.0, window='hamming', window_size=0.02, window_stride=0.01, yogi_beta=0.999, yogi_beta2=-1, yogi_eta=0.005, yogi_tau=0.001, zipf_alpha='5')
+
+2021-08-05:22:26:01,289 INFO     [learner.py:527] ====Start train round 1
+2021-08-05:22:26:01,815 INFO     [learner.py:165] Start to run client 4 on rank 4...
+2021-08-05:22:26:04,69 INFO     [learner.py:440] Completed to run client 4
+2021-08-05:22:26:04,205 INFO     [learner.py:607] ====Pushing takes 0.1267399787902832 s
+2021-08-05:22:26:05,200 INFO     [learner.py:527] ====Start train round 2
+2021-08-05:22:26:05,309 INFO     [learner.py:165] Start to run client 39 on rank 4...
+2021-08-05:22:26:07,893 INFO     [learner.py:440] Completed to run client 39
+2021-08-05:22:26:08,95 INFO     [learner.py:165] Start to run client 49 on rank 4...
+2021-08-05:22:26:10,346 INFO     [learner.py:440] Completed to run client 49
+2021-08-05:22:26:10,761 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:26:13,13 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:26:13,139 INFO     [learner.py:165] Start to run client 44 on rank 4...
+2021-08-05:22:26:15,187 INFO     [learner.py:440] Completed to run client 44
+2021-08-05:22:26:15,737 INFO     [learner.py:607] ====Pushing takes 0.548628568649292 s
+2021-08-05:22:26:19,541 INFO     [learner.py:527] ====Start train round 3
+2021-08-05:22:26:20,11 INFO     [learner.py:165] Start to run client 49 on rank 4...
+2021-08-05:22:26:21,516 INFO     [learner.py:440] Completed to run client 49
+2021-08-05:22:26:21,821 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:26:23,473 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:26:23,630 INFO     [learner.py:607] ====Pushing takes 0.1546034812927246 s
+2021-08-05:22:26:32,852 INFO     [learner.py:527] ====Start train round 4
+2021-08-05:22:26:33,316 INFO     [learner.py:165] Start to run client 49 on rank 4...
+2021-08-05:22:26:35,328 INFO     [learner.py:440] Completed to run client 49
+2021-08-05:22:26:35,447 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:26:38,540 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:26:38,672 INFO     [learner.py:607] ====Pushing takes 0.12998270988464355 s
+2021-08-05:22:26:43,666 INFO     [learner.py:527] ====Start train round 5
+2021-08-05:22:26:44,88 INFO     [learner.py:165] Start to run client 49 on rank 4...
+2021-08-05:22:26:45,698 INFO     [learner.py:440] Completed to run client 49
+2021-08-05:22:26:46,122 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:26:47,874 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:26:48,24 INFO     [learner.py:607] ====Pushing takes 0.1478278636932373 s
+2021-08-05:22:26:54,373 INFO     [learner.py:527] ====Start train round 6
+2021-08-05:22:26:54,821 INFO     [learner.py:165] Start to run client 49 on rank 4...
+2021-08-05:22:26:56,416 INFO     [learner.py:440] Completed to run client 49
+2021-08-05:22:26:56,503 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:26:58,428 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:26:58,600 INFO     [learner.py:607] ====Pushing takes 0.1699817180633545 s
+2021-08-05:22:27:05,612 INFO     [learner.py:527] ====Start train round 7
+2021-08-05:22:27:06,62 INFO     [learner.py:165] Start to run client 49 on rank 4...
+2021-08-05:22:27:08,126 INFO     [learner.py:440] Completed to run client 49
+2021-08-05:22:27:08,239 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:27:10,69 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:27:10,229 INFO     [learner.py:607] ====Pushing takes 0.1561276912689209 s
+2021-08-05:22:27:19,841 INFO     [learner.py:527] ====Start train round 8
+2021-08-05:22:27:20,201 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:27:22,335 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:27:22,385 INFO     [learner.py:607] ====Pushing takes 0.04825258255004883 s
+2021-08-05:22:27:33,439 INFO     [learner.py:527] ====Start train round 9
+2021-08-05:22:27:33,859 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:27:35,610 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:27:35,678 INFO     [learner.py:607] ====Pushing takes 0.06463837623596191 s
+2021-08-05:22:27:41,567 INFO     [learner.py:527] ====Start train round 10
+2021-08-05:22:27:42,22 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:27:43,748 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:27:43,807 INFO     [learner.py:607] ====Pushing takes 0.056801557540893555 s
+2021-08-05:22:29:05,137 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 3.8333, Top-1 Accuracy: 1546.0/27379 (0.0565), Top-5 Accuracy: 0.2397
+2021-08-05:22:29:05,154 INFO     [learner.py:657] After aggregation epoch 10, CumulTime 184.4074, eval_time 75.9425, test_loss 3.8333, test_accuracy 0.0565, test_5_accuracy 0.2397 
+
+2021-08-05:22:29:05,487 INFO     [learner.py:527] ====Start train round 11
+2021-08-05:22:29:05,930 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:29:07,520 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:29:07,615 INFO     [learner.py:607] ====Pushing takes 0.09259438514709473 s
+2021-08-05:22:29:13,655 INFO     [learner.py:527] ====Start train round 12
+2021-08-05:22:29:14,100 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:29:15,796 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:29:15,848 INFO     [learner.py:607] ====Pushing takes 0.04943132400512695 s
+2021-08-05:22:29:25,495 INFO     [learner.py:527] ====Start train round 13
+2021-08-05:22:29:25,944 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:29:27,719 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:29:27,792 INFO     [learner.py:607] ====Pushing takes 0.07004237174987793 s
+2021-08-05:22:29:33,901 INFO     [learner.py:527] ====Start train round 14
+2021-08-05:22:29:34,285 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:29:35,981 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:29:36,45 INFO     [learner.py:607] ====Pushing takes 0.062493324279785156 s
+2021-08-05:22:29:39,627 INFO     [learner.py:527] ====Start train round 15
+2021-08-05:22:29:40,74 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:29:42,2 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:29:42,81 INFO     [learner.py:607] ====Pushing takes 0.07207465171813965 s
+2021-08-05:22:29:45,569 INFO     [learner.py:527] ====Start train round 16
+2021-08-05:22:29:45,985 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:29:47,638 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:29:47,699 INFO     [learner.py:607] ====Pushing takes 0.05873298645019531 s
+2021-08-05:22:29:53,490 INFO     [learner.py:527] ====Start train round 17
+2021-08-05:22:29:53,924 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:29:55,619 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:29:55,668 INFO     [learner.py:607] ====Pushing takes 0.04735302925109863 s
+2021-08-05:22:29:59,217 INFO     [learner.py:527] ====Start train round 18
+2021-08-05:22:29:59,669 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:30:01,585 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:30:01,659 INFO     [learner.py:607] ====Pushing takes 0.07243037223815918 s
+2021-08-05:22:30:07,528 INFO     [learner.py:527] ====Start train round 19
+2021-08-05:22:30:07,837 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:30:09,611 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:30:09,692 INFO     [learner.py:607] ====Pushing takes 0.07807588577270508 s
+2021-08-05:22:30:13,315 INFO     [learner.py:527] ====Start train round 20
+2021-08-05:22:30:13,774 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:30:15,811 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:30:15,883 INFO     [learner.py:607] ====Pushing takes 0.06972432136535645 s
+2021-08-05:22:31:38,66 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 3.7382, Top-1 Accuracy: 2183.0/27379 (0.0797), Top-5 Accuracy: 0.3675
+2021-08-05:22:31:38,100 INFO     [learner.py:657] After aggregation epoch 20, CumulTime 337.3535, eval_time 76.6593, test_loss 3.7382, test_accuracy 0.0797, test_5_accuracy 0.3675 
+
+2021-08-05:22:31:38,442 INFO     [learner.py:527] ====Start train round 21
+2021-08-05:22:31:38,544 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:31:40,366 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:31:40,454 INFO     [learner.py:607] ====Pushing takes 0.08529996871948242 s
+2021-08-05:22:31:45,565 INFO     [learner.py:527] ====Start train round 22
+2021-08-05:22:31:45,778 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:31:47,608 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:31:47,674 INFO     [learner.py:607] ====Pushing takes 0.06458234786987305 s
+2021-08-05:22:31:51,239 INFO     [learner.py:527] ====Start train round 23
+2021-08-05:22:31:51,354 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:31:53,438 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:31:53,491 INFO     [learner.py:607] ====Pushing takes 0.050882577896118164 s
+2021-08-05:22:31:59,562 INFO     [learner.py:527] ====Start train round 24
+2021-08-05:22:32:00,20 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:32:01,846 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:32:01,912 INFO     [learner.py:607] ====Pushing takes 0.06403112411499023 s
+2021-08-05:22:32:05,179 INFO     [learner.py:527] ====Start train round 25
+2021-08-05:22:32:05,612 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:32:07,314 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:32:07,383 INFO     [learner.py:607] ====Pushing takes 0.06655478477478027 s
+2021-08-05:22:32:13,547 INFO     [learner.py:527] ====Start train round 26
+2021-08-05:22:32:13,959 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:32:15,632 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:32:15,705 INFO     [learner.py:607] ====Pushing takes 0.06705641746520996 s
+2021-08-05:22:32:19,373 INFO     [learner.py:527] ====Start train round 27
+2021-08-05:22:32:19,812 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:32:21,388 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:32:21,434 INFO     [learner.py:607] ====Pushing takes 0.043738365173339844 s
+2021-08-05:22:32:28,866 INFO     [learner.py:527] ====Start train round 28
+2021-08-05:22:32:29,295 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:32:31,107 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:32:31,195 INFO     [learner.py:607] ====Pushing takes 0.0858144760131836 s
+2021-08-05:22:32:41,589 INFO     [learner.py:527] ====Start train round 29
+2021-08-05:22:32:41,866 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:32:43,485 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:32:43,614 INFO     [learner.py:607] ====Pushing takes 0.12691473960876465 s
+2021-08-05:22:32:55,584 INFO     [learner.py:527] ====Start train round 30
+2021-08-05:22:32:56,13 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:32:57,714 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:32:57,832 INFO     [learner.py:607] ====Pushing takes 0.11508941650390625 s
+2021-08-05:22:34:21,542 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 3.4822, Top-1 Accuracy: 3739.0/27379 (0.1366), Top-5 Accuracy: 0.4071
+2021-08-05:22:34:21,546 INFO     [learner.py:657] After aggregation epoch 30, CumulTime 500.8, eval_time 75.9088, test_loss 3.4822, test_accuracy 0.1366, test_5_accuracy 0.4071 
+
+2021-08-05:22:34:21,926 INFO     [learner.py:527] ====Start train round 31
+2021-08-05:22:34:22,429 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:34:24,524 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:34:24,612 INFO     [learner.py:607] ====Pushing takes 0.08568334579467773 s
+2021-08-05:22:34:33,630 INFO     [learner.py:527] ====Start train round 32
+2021-08-05:22:34:33,948 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:34:35,757 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:34:35,843 INFO     [learner.py:607] ====Pushing takes 0.08350992202758789 s
+2021-08-05:22:34:43,773 INFO     [learner.py:527] ====Start train round 33
+2021-08-05:22:34:44,210 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:34:46,128 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:34:46,182 INFO     [learner.py:607] ====Pushing takes 0.05177879333496094 s
+2021-08-05:22:34:53,942 INFO     [learner.py:527] ====Start train round 34
+2021-08-05:22:34:54,363 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:34:55,972 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:34:56,25 INFO     [learner.py:607] ====Pushing takes 0.05042743682861328 s
+2021-08-05:22:35:04,201 INFO     [learner.py:527] ====Start train round 35
+2021-08-05:22:35:04,652 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:35:06,629 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:35:06,680 INFO     [learner.py:607] ====Pushing takes 0.048193931579589844 s
+2021-08-05:22:35:15,611 INFO     [learner.py:527] ====Start train round 36
+2021-08-05:22:35:15,883 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:35:17,623 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:35:17,677 INFO     [learner.py:607] ====Pushing takes 0.05198216438293457 s
+2021-08-05:22:35:24,521 INFO     [learner.py:527] ====Start train round 37
+2021-08-05:22:35:24,902 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:35:27,41 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:35:27,114 INFO     [learner.py:607] ====Pushing takes 0.07062745094299316 s
+2021-08-05:22:35:34,903 INFO     [learner.py:527] ====Start train round 38
+2021-08-05:22:35:35,67 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:35:36,940 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:35:36,996 INFO     [learner.py:607] ====Pushing takes 0.0471806526184082 s
+2021-08-05:22:35:45,152 INFO     [learner.py:527] ====Start train round 39
+2021-08-05:22:35:45,554 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:35:47,676 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:35:47,725 INFO     [learner.py:607] ====Pushing takes 0.04741239547729492 s
+2021-08-05:22:35:57,628 INFO     [learner.py:527] ====Start train round 40
+2021-08-05:22:35:58,95 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:35:59,803 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:35:59,847 INFO     [learner.py:607] ====Pushing takes 0.04166817665100098 s
+2021-08-05:22:37:34,927 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 3.4729, Top-1 Accuracy: 4122.0/27379 (0.1506), Top-5 Accuracy: 0.418
+2021-08-05:22:37:34,931 INFO     [learner.py:657] After aggregation epoch 40, CumulTime 694.1843, eval_time 87.3223, test_loss 3.4729, test_accuracy 0.1506, test_5_accuracy 0.418 
+
+2021-08-05:22:37:35,325 INFO     [learner.py:527] ====Start train round 41
+2021-08-05:22:37:35,669 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:37:37,567 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:37:37,647 INFO     [learner.py:607] ====Pushing takes 0.07737088203430176 s
+2021-08-05:22:37:49,674 INFO     [learner.py:527] ====Start train round 42
+2021-08-05:22:37:50,87 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:37:52,175 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:37:52,225 INFO     [learner.py:607] ====Pushing takes 0.048130035400390625 s
+2021-08-05:22:37:59,783 INFO     [learner.py:527] ====Start train round 43
+2021-08-05:22:37:59,916 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:38:01,764 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:38:01,821 INFO     [learner.py:607] ====Pushing takes 0.05534958839416504 s
+2021-08-05:22:38:09,840 INFO     [learner.py:527] ====Start train round 44
+2021-08-05:22:38:10,236 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:38:12,357 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:38:12,427 INFO     [learner.py:607] ====Pushing takes 0.06694173812866211 s
+2021-08-05:22:38:19,850 INFO     [learner.py:527] ====Start train round 45
+2021-08-05:22:38:19,974 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:38:21,917 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:38:21,968 INFO     [learner.py:607] ====Pushing takes 0.04887557029724121 s
+2021-08-05:22:38:31,666 INFO     [learner.py:527] ====Start train round 46
+2021-08-05:22:38:31,873 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:38:33,984 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:38:34,78 INFO     [learner.py:607] ====Pushing takes 0.09065914154052734 s
+2021-08-05:22:38:45,677 INFO     [learner.py:527] ====Start train round 47
+2021-08-05:22:38:46,26 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:38:47,802 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:38:47,866 INFO     [learner.py:607] ====Pushing takes 0.06081891059875488 s
+2021-08-05:22:38:59,671 INFO     [learner.py:527] ====Start train round 48
+2021-08-05:22:38:59,788 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:39:01,556 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:39:01,614 INFO     [learner.py:607] ====Pushing takes 0.05635976791381836 s
+2021-08-05:22:39:13,671 INFO     [learner.py:527] ====Start train round 49
+2021-08-05:22:39:14,47 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:39:15,774 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:39:15,824 INFO     [learner.py:607] ====Pushing takes 0.04848647117614746 s
+2021-08-05:22:39:23,788 INFO     [learner.py:527] ====Start train round 50
+2021-08-05:22:39:23,956 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:39:25,575 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:39:25,631 INFO     [learner.py:607] ====Pushing takes 0.0537562370300293 s
+2021-08-05:22:40:49,857 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 3.2283, Top-1 Accuracy: 4743.0/27379 (0.1732), Top-5 Accuracy: 0.4868
+2021-08-05:22:40:49,861 INFO     [learner.py:657] After aggregation epoch 50, CumulTime 889.1143, eval_time 76.035, test_loss 3.2283, test_accuracy 0.1732, test_5_accuracy 0.4868 
+
+2021-08-05:22:40:50,491 INFO     [learner.py:527] ====Start train round 51
+2021-08-05:22:40:50,865 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:40:52,696 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:40:52,768 INFO     [learner.py:607] ====Pushing takes 0.07025814056396484 s
+2021-08-05:22:41:00,424 INFO     [learner.py:527] ====Start train round 52
+2021-08-05:22:41:00,869 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:41:02,511 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:41:02,577 INFO     [learner.py:607] ====Pushing takes 0.06312060356140137 s
+2021-08-05:22:41:10,561 INFO     [learner.py:527] ====Start train round 53
+2021-08-05:22:41:10,999 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:41:12,717 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:41:12,772 INFO     [learner.py:607] ====Pushing takes 0.05224180221557617 s
+2021-08-05:22:41:20,757 INFO     [learner.py:527] ====Start train round 54
+2021-08-05:22:41:21,194 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:41:22,805 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:41:22,863 INFO     [learner.py:607] ====Pushing takes 0.055687904357910156 s
+2021-08-05:22:41:33,720 INFO     [learner.py:527] ====Start train round 55
+2021-08-05:22:41:34,226 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:41:35,911 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:41:35,973 INFO     [learner.py:607] ====Pushing takes 0.05991959571838379 s
+2021-08-05:22:41:41,84 INFO     [learner.py:527] ====Start train round 56
+2021-08-05:22:41:41,524 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:41:43,208 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:41:43,254 INFO     [learner.py:607] ====Pushing takes 0.04289388656616211 s
+2021-08-05:22:41:51,215 INFO     [learner.py:527] ====Start train round 57
+2021-08-05:22:41:51,625 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:41:53,411 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:41:53,470 INFO     [learner.py:607] ====Pushing takes 0.05681777000427246 s
+2021-08-05:22:42:01,706 INFO     [learner.py:527] ====Start train round 58
+2021-08-05:22:42:02,148 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:42:03,900 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:42:03,947 INFO     [learner.py:607] ====Pushing takes 0.0442957878112793 s
+2021-08-05:22:42:11,300 INFO     [learner.py:527] ====Start train round 59
+2021-08-05:22:42:11,714 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:42:13,497 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:42:13,558 INFO     [learner.py:607] ====Pushing takes 0.059441328048706055 s
+2021-08-05:22:42:21,519 INFO     [learner.py:527] ====Start train round 60
+2021-08-05:22:42:21,970 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:42:23,856 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:42:23,904 INFO     [learner.py:607] ====Pushing takes 0.04571866989135742 s
+2021-08-05:22:43:46,968 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 3.2081, Top-1 Accuracy: 5689.0/27379 (0.2078), Top-5 Accuracy: 0.4936
+2021-08-05:22:43:46,972 INFO     [learner.py:657] After aggregation epoch 60, CumulTime 1066.2252, eval_time 75.1893, test_loss 3.2081, test_accuracy 0.2078, test_5_accuracy 0.4936 
+
+2021-08-05:22:43:47,274 INFO     [learner.py:527] ====Start train round 61
+2021-08-05:22:43:47,739 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:43:49,667 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:43:49,736 INFO     [learner.py:607] ====Pushing takes 0.06639289855957031 s
+2021-08-05:22:43:57,839 INFO     [learner.py:527] ====Start train round 62
+2021-08-05:22:43:58,301 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:44:00,128 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:44:00,176 INFO     [learner.py:607] ====Pushing takes 0.04574275016784668 s
+2021-08-05:22:44:07,979 INFO     [learner.py:527] ====Start train round 63
+2021-08-05:22:44:08,457 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:44:10,227 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:44:10,277 INFO     [learner.py:607] ====Pushing takes 0.04797482490539551 s
+2021-08-05:22:44:18,127 INFO     [learner.py:527] ====Start train round 64
+2021-08-05:22:44:18,545 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:44:20,309 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:44:20,365 INFO     [learner.py:607] ====Pushing takes 0.053704261779785156 s
+2021-08-05:22:44:23,255 INFO     [learner.py:527] ====Start train round 65
+2021-08-05:22:44:23,721 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:44:25,518 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:44:25,592 INFO     [learner.py:607] ====Pushing takes 0.06939864158630371 s
+2021-08-05:22:44:35,874 INFO     [learner.py:527] ====Start train round 66
+2021-08-05:22:44:36,273 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:44:38,72 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:44:38,116 INFO     [learner.py:607] ====Pushing takes 0.04174494743347168 s
+2021-08-05:22:44:49,877 INFO     [learner.py:527] ====Start train round 67
+2021-08-05:22:44:50,352 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:44:52,345 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:44:52,410 INFO     [learner.py:607] ====Pushing takes 0.06293082237243652 s
+2021-08-05:22:45:03,875 INFO     [learner.py:527] ====Start train round 68
+2021-08-05:22:45:04,313 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:45:06,118 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:45:06,198 INFO     [learner.py:607] ====Pushing takes 0.07812786102294922 s
+2021-08-05:22:45:17,878 INFO     [learner.py:527] ====Start train round 69
+2021-08-05:22:45:18,336 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:45:20,180 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:45:20,256 INFO     [learner.py:607] ====Pushing takes 0.07224655151367188 s
+2021-08-05:22:45:28,110 INFO     [learner.py:527] ====Start train round 70
+2021-08-05:22:45:28,534 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:45:30,123 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:45:30,213 INFO     [learner.py:607] ====Pushing takes 0.08764958381652832 s
+2021-08-05:22:46:49,314 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.9997, Top-1 Accuracy: 6913.0/27379 (0.2525), Top-5 Accuracy: 0.531
+2021-08-05:22:46:49,334 INFO     [learner.py:657] After aggregation epoch 70, CumulTime 1248.5871, eval_time 75.69, test_loss 2.9997, test_accuracy 0.2525, test_5_accuracy 0.531 
+
+2021-08-05:22:46:49,634 INFO     [learner.py:527] ====Start train round 71
+2021-08-05:22:46:50,66 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:46:52,193 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:46:52,260 INFO     [learner.py:607] ====Pushing takes 0.06476902961730957 s
+2021-08-05:22:47:00,670 INFO     [learner.py:527] ====Start train round 72
+2021-08-05:22:47:00,795 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:47:02,709 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:47:02,776 INFO     [learner.py:607] ====Pushing takes 0.06500744819641113 s
+2021-08-05:22:47:10,743 INFO     [learner.py:527] ====Start train round 73
+2021-08-05:22:47:11,131 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:47:13,237 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:47:13,295 INFO     [learner.py:607] ====Pushing takes 0.056060791015625 s
+2021-08-05:22:47:23,927 INFO     [learner.py:527] ====Start train round 74
+2021-08-05:22:47:24,381 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:47:26,11 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:47:26,71 INFO     [learner.py:607] ====Pushing takes 0.05701899528503418 s
+2021-08-05:22:47:33,919 INFO     [learner.py:527] ====Start train round 75
+2021-08-05:22:47:34,329 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:47:35,876 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:47:35,932 INFO     [learner.py:607] ====Pushing takes 0.054647207260131836 s
+2021-08-05:22:47:44,112 INFO     [learner.py:527] ====Start train round 76
+2021-08-05:22:47:44,570 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:47:46,61 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:47:46,111 INFO     [learner.py:607] ====Pushing takes 0.047831058502197266 s
+2021-08-05:22:47:54,260 INFO     [learner.py:527] ====Start train round 77
+2021-08-05:22:47:54,732 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:47:56,418 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:47:56,485 INFO     [learner.py:607] ====Pushing takes 0.06454801559448242 s
+2021-08-05:22:48:05,947 INFO     [learner.py:527] ====Start train round 78
+2021-08-05:22:48:06,249 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:48:07,992 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:48:08,76 INFO     [learner.py:607] ====Pushing takes 0.08098006248474121 s
+2021-08-05:22:48:19,933 INFO     [learner.py:527] ====Start train round 79
+2021-08-05:22:48:20,92 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:48:21,679 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:48:21,757 INFO     [learner.py:607] ====Pushing takes 0.07640957832336426 s
+2021-08-05:22:48:25,623 INFO     [learner.py:527] ====Start train round 80
+2021-08-05:22:48:26,75 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:48:27,584 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:48:27,641 INFO     [learner.py:607] ====Pushing takes 0.054731130599975586 s
+2021-08-05:22:49:48,855 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.9634, Top-1 Accuracy: 6690.0/27379 (0.2443), Top-5 Accuracy: 0.5429
+2021-08-05:22:49:48,859 INFO     [learner.py:657] After aggregation epoch 80, CumulTime 1428.1129, eval_time 74.9849, test_loss 2.9634, test_accuracy 0.2443, test_5_accuracy 0.5429 
+
+2021-08-05:22:49:49,159 INFO     [learner.py:527] ====Start train round 81
+2021-08-05:22:49:49,618 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:49:51,442 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:49:51,522 INFO     [learner.py:607] ====Pushing takes 0.0775606632232666 s
+2021-08-05:22:49:57,965 INFO     [learner.py:527] ====Start train round 82
+2021-08-05:22:49:58,416 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:00,187 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:00,282 INFO     [learner.py:607] ====Pushing takes 0.09245944023132324 s
+2021-08-05:22:50:03,540 INFO     [learner.py:527] ====Start train round 83
+2021-08-05:22:50:03,994 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:05,545 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:05,610 INFO     [learner.py:607] ====Pushing takes 0.05702805519104004 s
+2021-08-05:22:50:11,958 INFO     [learner.py:527] ====Start train round 84
+2021-08-05:22:50:12,393 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:14,128 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:14,231 INFO     [learner.py:607] ====Pushing takes 0.10069584846496582 s
+2021-08-05:22:50:17,793 INFO     [learner.py:527] ====Start train round 85
+2021-08-05:22:50:18,270 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:20,104 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:20,171 INFO     [learner.py:607] ====Pushing takes 0.06531071662902832 s
+2021-08-05:22:50:25,972 INFO     [learner.py:527] ====Start train round 86
+2021-08-05:22:50:26,376 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:28,218 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:28,298 INFO     [learner.py:607] ====Pushing takes 0.07783150672912598 s
+2021-08-05:22:50:31,830 INFO     [learner.py:527] ====Start train round 87
+2021-08-05:22:50:32,278 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:34,178 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:34,238 INFO     [learner.py:607] ====Pushing takes 0.05760908126831055 s
+2021-08-05:22:50:39,957 INFO     [learner.py:527] ====Start train round 88
+2021-08-05:22:50:40,238 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:41,949 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:42,22 INFO     [learner.py:607] ====Pushing takes 0.07126045227050781 s
+2021-08-05:22:50:45,938 INFO     [learner.py:527] ====Start train round 89
+2021-08-05:22:50:46,313 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:48,440 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:48,478 INFO     [learner.py:607] ====Pushing takes 0.036458492279052734 s
+2021-08-05:22:50:53,973 INFO     [learner.py:527] ====Start train round 90
+2021-08-05:22:50:54,463 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:50:56,276 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:50:56,372 INFO     [learner.py:607] ====Pushing takes 0.09354615211486816 s
+2021-08-05:22:52:16,872 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.9249, Top-1 Accuracy: 6996.0/27379 (0.2555), Top-5 Accuracy: 0.5547
+2021-08-05:22:52:16,876 INFO     [learner.py:657] After aggregation epoch 90, CumulTime 1576.1293, eval_time 77.3504, test_loss 2.9249, test_accuracy 0.2555, test_5_accuracy 0.5547 
+
+2021-08-05:22:52:17,160 INFO     [learner.py:527] ====Start train round 91
+2021-08-05:22:52:17,587 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:52:19,277 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:52:19,337 INFO     [learner.py:607] ====Pushing takes 0.05798768997192383 s
+2021-08-05:22:52:25,222 INFO     [learner.py:527] ====Start train round 92
+2021-08-05:22:52:25,680 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:52:27,285 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:52:27,373 INFO     [learner.py:607] ====Pushing takes 0.08604741096496582 s
+2021-08-05:22:52:32,12 INFO     [learner.py:527] ====Start train round 93
+2021-08-05:22:52:32,473 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:52:34,84 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:52:34,140 INFO     [learner.py:607] ====Pushing takes 0.05460238456726074 s
+2021-08-05:22:52:39,146 INFO     [learner.py:527] ====Start train round 94
+2021-08-05:22:52:39,601 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:52:41,288 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:52:41,346 INFO     [learner.py:607] ====Pushing takes 0.05585479736328125 s
+2021-08-05:22:52:46,90 INFO     [learner.py:527] ====Start train round 95
+2021-08-05:22:52:46,499 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:52:48,260 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:52:48,309 INFO     [learner.py:607] ====Pushing takes 0.04721879959106445 s
+2021-08-05:22:52:53,143 INFO     [learner.py:527] ====Start train round 96
+2021-08-05:22:52:53,587 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:52:55,488 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:52:55,626 INFO     [learner.py:607] ====Pushing takes 0.13285112380981445 s
+2021-08-05:22:53:00,702 INFO     [learner.py:527] ====Start train round 97
+2021-08-05:22:53:01,71 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:53:02,681 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:53:02,745 INFO     [learner.py:607] ====Pushing takes 0.06221318244934082 s
+2021-08-05:22:53:07,799 INFO     [learner.py:527] ====Start train round 98
+2021-08-05:22:53:08,227 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:53:10,257 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:53:10,314 INFO     [learner.py:607] ====Pushing takes 0.055214881896972656 s
+2021-08-05:22:53:14,829 INFO     [learner.py:527] ====Start train round 99
+2021-08-05:22:53:15,167 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:53:16,872 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:53:16,918 INFO     [learner.py:607] ====Pushing takes 0.04422736167907715 s
+2021-08-05:22:53:21,758 INFO     [learner.py:527] ====Start train round 100
+2021-08-05:22:53:22,185 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:53:24,295 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:53:24,358 INFO     [learner.py:607] ====Pushing takes 0.061055898666381836 s
+2021-08-05:22:54:42,693 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.8266, Top-1 Accuracy: 7543.0/27379 (0.2755), Top-5 Accuracy: 0.5716
+2021-08-05:22:54:42,709 INFO     [learner.py:657] After aggregation epoch 100, CumulTime 1721.9621, eval_time 73.9626, test_loss 2.8266, test_accuracy 0.2755, test_5_accuracy 0.5716 
+
+2021-08-05:22:54:42,997 INFO     [learner.py:527] ====Start train round 101
+2021-08-05:22:54:43,402 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:54:45,72 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:54:45,130 INFO     [learner.py:607] ====Pushing takes 0.05587649345397949 s
+2021-08-05:22:54:52,33 INFO     [learner.py:527] ====Start train round 102
+2021-08-05:22:54:52,423 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:54:53,992 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:54:54,55 INFO     [learner.py:607] ====Pushing takes 0.06039142608642578 s
+2021-08-05:22:54:58,559 INFO     [learner.py:527] ====Start train round 103
+2021-08-05:22:54:59,35 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:55:00,567 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:55:00,617 INFO     [learner.py:607] ====Pushing takes 0.04571652412414551 s
+2021-08-05:22:55:06,29 INFO     [learner.py:527] ====Start train round 104
+2021-08-05:22:55:06,484 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:55:08,373 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:55:08,439 INFO     [learner.py:607] ====Pushing takes 0.0638115406036377 s
+2021-08-05:22:55:12,448 INFO     [learner.py:527] ====Start train round 105
+2021-08-05:22:55:12,899 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:55:14,545 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:55:14,679 INFO     [learner.py:607] ====Pushing takes 0.13122940063476562 s
+2021-08-05:22:55:20,31 INFO     [learner.py:527] ====Start train round 106
+2021-08-05:22:55:20,456 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:55:22,341 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:55:22,430 INFO     [learner.py:607] ====Pushing takes 0.08626365661621094 s
+2021-08-05:22:55:26,584 INFO     [learner.py:527] ====Start train round 107
+2021-08-05:22:55:27,80 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:55:28,795 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:55:28,862 INFO     [learner.py:607] ====Pushing takes 0.06441807746887207 s
+2021-08-05:22:55:34,41 INFO     [learner.py:527] ====Start train round 108
+2021-08-05:22:55:34,435 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:55:36,112 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:55:36,178 INFO     [learner.py:607] ====Pushing takes 0.06392288208007812 s
+2021-08-05:22:55:40,335 INFO     [learner.py:527] ====Start train round 109
+2021-08-05:22:55:40,761 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:55:42,870 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:55:42,960 INFO     [learner.py:607] ====Pushing takes 0.08845639228820801 s
+2021-08-05:22:55:48,46 INFO     [learner.py:527] ====Start train round 110
+2021-08-05:22:55:48,495 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:55:50,326 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:55:50,387 INFO     [learner.py:607] ====Pushing takes 0.05861258506774902 s
+2021-08-05:22:57:11,998 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.8533, Top-1 Accuracy: 7657.0/27379 (0.2797), Top-5 Accuracy: 0.5716
+2021-08-05:22:57:12,26 INFO     [learner.py:657] After aggregation epoch 110, CumulTime 1871.2797, eval_time 77.6751, test_loss 2.8533, test_accuracy 0.2797, test_5_accuracy 0.5716 
+
+2021-08-05:22:57:12,315 INFO     [learner.py:527] ====Start train round 111
+2021-08-05:22:57:12,600 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:57:14,730 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:57:14,787 INFO     [learner.py:607] ====Pushing takes 0.05562734603881836 s
+2021-08-05:22:57:18,744 INFO     [learner.py:527] ====Start train round 112
+2021-08-05:22:57:19,12 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:57:20,849 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:57:20,991 INFO     [learner.py:607] ====Pushing takes 0.13980650901794434 s
+2021-08-05:22:57:26,114 INFO     [learner.py:527] ====Start train round 113
+2021-08-05:22:57:26,379 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:57:28,533 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:57:28,630 INFO     [learner.py:607] ====Pushing takes 0.09382748603820801 s
+2021-08-05:22:57:32,871 INFO     [learner.py:527] ====Start train round 114
+2021-08-05:22:57:33,75 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:57:34,968 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:57:35,102 INFO     [learner.py:607] ====Pushing takes 0.13164448738098145 s
+2021-08-05:22:57:40,137 INFO     [learner.py:527] ====Start train round 115
+2021-08-05:22:57:40,430 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:57:42,562 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:57:42,616 INFO     [learner.py:607] ====Pushing takes 0.05239462852478027 s
+2021-08-05:22:57:46,873 INFO     [learner.py:527] ====Start train round 116
+2021-08-05:22:57:47,58 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:57:48,964 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:57:49,43 INFO     [learner.py:607] ====Pushing takes 0.07587742805480957 s
+2021-08-05:22:57:54,147 INFO     [learner.py:527] ====Start train round 117
+2021-08-05:22:57:54,254 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:57:56,954 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:57:57,67 INFO     [learner.py:607] ====Pushing takes 0.08269786834716797 s
+2021-08-05:22:58:02,3 INFO     [learner.py:527] ====Start train round 118
+2021-08-05:22:58:02,196 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:58:04,91 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:58:04,161 INFO     [learner.py:607] ====Pushing takes 0.06782031059265137 s
+2021-08-05:22:58:08,897 INFO     [learner.py:527] ====Start train round 119
+2021-08-05:22:58:09,326 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:58:11,392 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:58:11,446 INFO     [learner.py:607] ====Pushing takes 0.049423933029174805 s
+2021-08-05:22:58:15,887 INFO     [learner.py:527] ====Start train round 120
+2021-08-05:22:58:16,72 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:58:17,918 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:58:17,976 INFO     [learner.py:607] ====Pushing takes 0.055693864822387695 s
+2021-08-05:22:59:38,734 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.8551, Top-1 Accuracy: 7397.0/27379 (0.2702), Top-5 Accuracy: 0.5666
+2021-08-05:22:59:38,754 INFO     [learner.py:657] After aggregation epoch 120, CumulTime 2018.0073, eval_time 75.8543, test_loss 2.8551, test_accuracy 0.2702, test_5_accuracy 0.5666 
+
+2021-08-05:22:59:39,128 INFO     [learner.py:527] ====Start train round 121
+2021-08-05:22:59:39,564 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:59:41,312 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:59:41,375 INFO     [learner.py:607] ====Pushing takes 0.060212135314941406 s
+2021-08-05:22:59:46,945 INFO     [learner.py:527] ====Start train round 122
+2021-08-05:22:59:47,101 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:59:48,767 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:59:48,849 INFO     [learner.py:607] ====Pushing takes 0.07900142669677734 s
+2021-08-05:22:59:54,65 INFO     [learner.py:527] ====Start train round 123
+2021-08-05:22:59:54,508 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:22:59:56,138 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:22:59:56,297 INFO     [learner.py:607] ====Pushing takes 0.15584301948547363 s
+2021-08-05:23:00:01,671 INFO     [learner.py:527] ====Start train round 124
+2021-08-05:23:00:02,49 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:00:03,793 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:00:03,918 INFO     [learner.py:607] ====Pushing takes 0.11881899833679199 s
+2021-08-05:23:00:08,482 INFO     [learner.py:527] ====Start train round 125
+2021-08-05:23:00:08,922 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:00:10,569 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:00:10,685 INFO     [learner.py:607] ====Pushing takes 0.11159181594848633 s
+2021-08-05:23:00:15,481 INFO     [learner.py:527] ====Start train round 126
+2021-08-05:23:00:15,886 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:00:17,544 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:00:17,631 INFO     [learner.py:607] ====Pushing takes 0.08365511894226074 s
+2021-08-05:23:00:22,529 INFO     [learner.py:527] ====Start train round 127
+2021-08-05:23:00:23,5 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:00:24,409 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:00:24,469 INFO     [learner.py:607] ====Pushing takes 0.057933807373046875 s
+2021-08-05:23:00:29,509 INFO     [learner.py:527] ====Start train round 128
+2021-08-05:23:00:29,946 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:00:31,754 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:00:31,814 INFO     [learner.py:607] ====Pushing takes 0.05700325965881348 s
+2021-08-05:23:00:36,402 INFO     [learner.py:527] ====Start train round 129
+2021-08-05:23:00:36,894 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:00:38,491 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:00:38,547 INFO     [learner.py:607] ====Pushing takes 0.053743839263916016 s
+2021-08-05:23:00:43,399 INFO     [learner.py:527] ====Start train round 130
+2021-08-05:23:00:43,841 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:00:45,564 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:00:45,641 INFO     [learner.py:607] ====Pushing takes 0.07129216194152832 s
+2021-08-05:23:02:07,687 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.8504, Top-1 Accuracy: 7767.0/27379 (0.2837), Top-5 Accuracy: 0.5782
+2021-08-05:23:02:07,718 INFO     [learner.py:657] After aggregation epoch 130, CumulTime 2166.9718, eval_time 77.1001, test_loss 2.8504, test_accuracy 0.2837, test_5_accuracy 0.5782 
+
+2021-08-05:23:02:08,74 INFO     [learner.py:527] ====Start train round 131
+2021-08-05:23:02:08,253 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:02:09,666 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:02:09,726 INFO     [learner.py:607] ====Pushing takes 0.057817935943603516 s
+2021-08-05:23:02:15,963 INFO     [learner.py:527] ====Start train round 132
+2021-08-05:23:02:16,396 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:02:17,981 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:02:18,102 INFO     [learner.py:607] ====Pushing takes 0.11916279792785645 s
+2021-08-05:23:02:22,787 INFO     [learner.py:527] ====Start train round 133
+2021-08-05:23:02:23,222 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:02:25,7 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:02:25,46 INFO     [learner.py:607] ====Pushing takes 0.03374505043029785 s
+2021-08-05:23:02:29,863 INFO     [learner.py:527] ====Start train round 134
+2021-08-05:23:02:30,322 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:02:32,232 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:02:32,307 INFO     [learner.py:607] ====Pushing takes 0.07223939895629883 s
+2021-08-05:23:02:36,846 INFO     [learner.py:527] ====Start train round 135
+2021-08-05:23:02:37,251 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:02:39,66 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:02:39,125 INFO     [learner.py:607] ====Pushing takes 0.05591392517089844 s
+2021-08-05:23:02:43,878 INFO     [learner.py:527] ====Start train round 136
+2021-08-05:23:02:44,338 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:02:46,335 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:02:46,396 INFO     [learner.py:607] ====Pushing takes 0.05485677719116211 s
+2021-08-05:23:02:50,863 INFO     [learner.py:527] ====Start train round 137
+2021-08-05:23:02:51,286 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:02:53,100 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:02:53,140 INFO     [learner.py:607] ====Pushing takes 0.03749394416809082 s
+2021-08-05:23:02:57,818 INFO     [learner.py:527] ====Start train round 138
+2021-08-05:23:02:58,280 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:03:00,216 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:03:00,256 INFO     [learner.py:607] ====Pushing takes 0.03693509101867676 s
+2021-08-05:23:03:06,572 INFO     [learner.py:527] ====Start train round 139
+2021-08-05:23:03:06,989 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:03:08,732 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:03:08,785 INFO     [learner.py:607] ====Pushing takes 0.05127406120300293 s
+2021-08-05:23:03:16,265 INFO     [learner.py:527] ====Start train round 140
+2021-08-05:23:03:16,570 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:03:18,165 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:03:18,216 INFO     [learner.py:607] ====Pushing takes 0.0491940975189209 s
+2021-08-05:23:04:36,241 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.7368, Top-1 Accuracy: 8544.0/27379 (0.3121), Top-5 Accuracy: 0.6001
+2021-08-05:23:04:36,264 INFO     [learner.py:657] After aggregation epoch 140, CumulTime 2315.5173, eval_time 74.9315, test_loss 2.7368, test_accuracy 0.3121, test_5_accuracy 0.6001 
+
+2021-08-05:23:04:36,585 INFO     [learner.py:527] ====Start train round 141
+2021-08-05:23:04:37,18 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:04:38,953 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:04:39,13 INFO     [learner.py:607] ====Pushing takes 0.05757474899291992 s
+2021-08-05:23:04:43,265 INFO     [learner.py:527] ====Start train round 142
+2021-08-05:23:04:43,681 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:04:45,268 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:04:45,322 INFO     [learner.py:607] ====Pushing takes 0.05177736282348633 s
+2021-08-05:23:04:50,338 INFO     [learner.py:527] ====Start train round 143
+2021-08-05:23:04:50,780 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:04:52,793 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:04:52,858 INFO     [learner.py:607] ====Pushing takes 0.0620267391204834 s
+2021-08-05:23:04:57,362 INFO     [learner.py:527] ====Start train round 144
+2021-08-05:23:04:57,719 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:04:59,482 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:04:59,533 INFO     [learner.py:607] ====Pushing takes 0.04893827438354492 s
+2021-08-05:23:05:04,388 INFO     [learner.py:527] ====Start train round 145
+2021-08-05:23:05:04,814 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:05:06,752 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:05:06,813 INFO     [learner.py:607] ====Pushing takes 0.05943775177001953 s
+2021-08-05:23:05:11,280 INFO     [learner.py:527] ====Start train round 146
+2021-08-05:23:05:11,677 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:05:13,415 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:05:13,471 INFO     [learner.py:607] ====Pushing takes 0.053316354751586914 s
+2021-08-05:23:05:18,227 INFO     [learner.py:527] ====Start train round 147
+2021-08-05:23:05:18,663 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:05:20,553 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:05:20,602 INFO     [learner.py:607] ====Pushing takes 0.047272682189941406 s
+2021-08-05:23:05:25,85 INFO     [learner.py:527] ====Start train round 148
+2021-08-05:23:05:25,489 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:05:27,248 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:05:27,301 INFO     [learner.py:607] ====Pushing takes 0.0508272647857666 s
+2021-08-05:23:05:32,72 INFO     [learner.py:527] ====Start train round 149
+2021-08-05:23:05:32,514 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:05:34,471 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:05:34,597 INFO     [learner.py:607] ====Pushing takes 0.12320351600646973 s
+2021-08-05:23:05:39,0 INFO     [learner.py:527] ====Start train round 150
+2021-08-05:23:05:39,426 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:05:41,258 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:05:41,302 INFO     [learner.py:607] ====Pushing takes 0.04255056381225586 s
+2021-08-05:23:07:04,199 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.7027, Top-1 Accuracy: 8624.0/27379 (0.315), Top-5 Accuracy: 0.6035
+2021-08-05:23:07:04,217 INFO     [learner.py:657] After aggregation epoch 150, CumulTime 2463.471, eval_time 78.9564, test_loss 2.7027, test_accuracy 0.315, test_5_accuracy 0.6035 
+
+2021-08-05:23:07:04,527 INFO     [learner.py:527] ====Start train round 151
+2021-08-05:23:07:04,900 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:07:06,587 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:07:06,638 INFO     [learner.py:607] ====Pushing takes 0.048647165298461914 s
+2021-08-05:23:07:14,445 INFO     [learner.py:527] ====Start train round 152
+2021-08-05:23:07:14,662 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:07:16,304 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:07:16,367 INFO     [learner.py:607] ====Pushing takes 0.061307668685913086 s
+2021-08-05:23:07:19,516 INFO     [learner.py:527] ====Start train round 153
+2021-08-05:23:07:19,963 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:07:21,546 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:07:21,617 INFO     [learner.py:607] ====Pushing takes 0.06820011138916016 s
+2021-08-05:23:07:28,436 INFO     [learner.py:527] ====Start train round 154
+2021-08-05:23:07:28,876 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:07:30,440 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:07:30,496 INFO     [learner.py:607] ====Pushing takes 0.054091691970825195 s
+2021-08-05:23:07:33,369 INFO     [learner.py:527] ====Start train round 155
+2021-08-05:23:07:33,809 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:07:35,446 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:07:35,496 INFO     [learner.py:607] ====Pushing takes 0.04537343978881836 s
+2021-08-05:23:07:42,433 INFO     [learner.py:527] ====Start train round 156
+2021-08-05:23:07:42,757 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:07:44,621 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:07:44,718 INFO     [learner.py:607] ====Pushing takes 0.09523510932922363 s
+2021-08-05:23:07:47,134 INFO     [learner.py:527] ====Start train round 157
+2021-08-05:23:07:47,581 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:07:49,506 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:07:49,575 INFO     [learner.py:607] ====Pushing takes 0.0674276351928711 s
+2021-08-05:23:07:56,453 INFO     [learner.py:527] ====Start train round 158
+2021-08-05:23:07:56,715 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:07:58,497 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:07:58,651 INFO     [learner.py:607] ====Pushing takes 0.1494123935699463 s
+2021-08-05:23:08:00,997 INFO     [learner.py:527] ====Start train round 159
+2021-08-05:23:08:01,431 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:08:03,505 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:08:03,673 INFO     [learner.py:607] ====Pushing takes 0.16495966911315918 s
+2021-08-05:23:08:10,450 INFO     [learner.py:527] ====Start train round 160
+2021-08-05:23:08:10,845 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:08:12,433 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:08:12,490 INFO     [learner.py:607] ====Pushing takes 0.0540921688079834 s
+2021-08-05:23:09:31,336 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.6225, Top-1 Accuracy: 8862.0/27379 (0.3237), Top-5 Accuracy: 0.623
+2021-08-05:23:09:31,359 INFO     [learner.py:657] After aggregation epoch 160, CumulTime 2610.6123, eval_time 76.3728, test_loss 2.6225, test_accuracy 0.3237, test_5_accuracy 0.623 
+
+2021-08-05:23:09:31,678 INFO     [learner.py:527] ====Start train round 161
+2021-08-05:23:09:32,52 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:09:33,824 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:09:33,886 INFO     [learner.py:607] ====Pushing takes 0.05977487564086914 s
+2021-08-05:23:09:39,159 INFO     [learner.py:527] ====Start train round 162
+2021-08-05:23:09:39,334 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:09:40,933 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:09:40,975 INFO     [learner.py:607] ====Pushing takes 0.03972887992858887 s
+2021-08-05:23:09:48,504 INFO     [learner.py:527] ====Start train round 163
+2021-08-05:23:09:48,732 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:09:50,851 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:09:50,920 INFO     [learner.py:607] ====Pushing takes 0.06395649909973145 s
+2021-08-05:23:09:52,958 INFO     [learner.py:527] ====Start train round 164
+2021-08-05:23:09:53,257 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:09:55,99 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:09:55,147 INFO     [learner.py:607] ====Pushing takes 0.0462646484375 s
+2021-08-05:23:10:02,505 INFO     [learner.py:527] ====Start train round 165
+2021-08-05:23:10:02,641 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:10:04,482 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:10:04,538 INFO     [learner.py:607] ====Pushing takes 0.05452275276184082 s
+2021-08-05:23:10:06,625 INFO     [learner.py:527] ====Start train round 166
+2021-08-05:23:10:07,64 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:10:08,703 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:10:08,770 INFO     [learner.py:607] ====Pushing takes 0.0644068717956543 s
+2021-08-05:23:10:16,516 INFO     [learner.py:527] ====Start train round 167
+2021-08-05:23:10:16,995 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:10:18,610 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:10:18,679 INFO     [learner.py:607] ====Pushing takes 0.06486105918884277 s
+2021-08-05:23:10:20,679 INFO     [learner.py:527] ====Start train round 168
+2021-08-05:23:10:21,120 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:10:22,701 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:10:22,765 INFO     [learner.py:607] ====Pushing takes 0.061676979064941406 s
+2021-08-05:23:10:30,516 INFO     [learner.py:527] ====Start train round 169
+2021-08-05:23:10:30,986 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:10:32,732 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:10:32,820 INFO     [learner.py:607] ====Pushing takes 0.08502602577209473 s
+2021-08-05:23:10:35,179 INFO     [learner.py:527] ====Start train round 170
+2021-08-05:23:10:35,632 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:10:37,178 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:10:37,238 INFO     [learner.py:607] ====Pushing takes 0.05797743797302246 s
+2021-08-05:23:11:59,742 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.5485, Top-1 Accuracy: 9764.0/27379 (0.3566), Top-5 Accuracy: 0.6406
+2021-08-05:23:11:59,768 INFO     [learner.py:657] After aggregation epoch 170, CumulTime 2759.0215, eval_time 75.3156, test_loss 2.5485, test_accuracy 0.3566, test_5_accuracy 0.6406 
+
+2021-08-05:23:12:00,62 INFO     [learner.py:527] ====Start train round 171
+2021-08-05:23:12:00,469 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:01,972 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:02,38 INFO     [learner.py:607] ====Pushing takes 0.06433510780334473 s
+2021-08-05:23:12:08,549 INFO     [learner.py:527] ====Start train round 172
+2021-08-05:23:12:08,998 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:10,513 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:10,557 INFO     [learner.py:607] ====Pushing takes 0.0418543815612793 s
+2021-08-05:23:12:12,331 INFO     [learner.py:527] ====Start train round 173
+2021-08-05:23:12:12,774 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:14,600 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:14,671 INFO     [learner.py:607] ====Pushing takes 0.0685124397277832 s
+2021-08-05:23:12:17,216 INFO     [learner.py:527] ====Start train round 174
+2021-08-05:23:12:17,662 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:19,344 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:19,414 INFO     [learner.py:607] ====Pushing takes 0.06815981864929199 s
+2021-08-05:23:12:24,184 INFO     [learner.py:527] ====Start train round 175
+2021-08-05:23:12:24,646 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:26,351 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:26,420 INFO     [learner.py:607] ====Pushing takes 0.06679463386535645 s
+2021-08-05:23:12:31,97 INFO     [learner.py:527] ====Start train round 176
+2021-08-05:23:12:31,549 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:33,387 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:33,427 INFO     [learner.py:607] ====Pushing takes 0.03813505172729492 s
+2021-08-05:23:12:37,915 INFO     [learner.py:527] ====Start train round 177
+2021-08-05:23:12:38,330 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:40,77 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:40,123 INFO     [learner.py:607] ====Pushing takes 0.04387402534484863 s
+2021-08-05:23:12:44,876 INFO     [learner.py:527] ====Start train round 178
+2021-08-05:23:12:45,332 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:47,193 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:47,246 INFO     [learner.py:607] ====Pushing takes 0.05039715766906738 s
+2021-08-05:23:12:52,59 INFO     [learner.py:527] ====Start train round 179
+2021-08-05:23:12:52,460 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:12:54,219 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:12:54,325 INFO     [learner.py:607] ====Pushing takes 0.10446763038635254 s
+2021-08-05:23:12:58,947 INFO     [learner.py:527] ====Start train round 180
+2021-08-05:23:12:59,401 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:13:01,254 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:13:01,441 INFO     [learner.py:607] ====Pushing takes 0.1851961612701416 s
+2021-08-05:23:14:20,270 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.5825, Top-1 Accuracy: 9407.0/27379 (0.3436), Top-5 Accuracy: 0.6291
+2021-08-05:23:14:20,278 INFO     [learner.py:657] After aggregation epoch 180, CumulTime 2899.5319, eval_time 74.0656, test_loss 2.5825, test_accuracy 0.3436, test_5_accuracy 0.6291 
+
+2021-08-05:23:14:20,570 INFO     [learner.py:527] ====Start train round 181
+2021-08-05:23:14:20,679 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:14:21,536 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:14:21,617 INFO     [learner.py:607] ====Pushing takes 0.07571673393249512 s
+2021-08-05:23:14:27,677 INFO     [learner.py:527] ====Start train round 182
+2021-08-05:23:14:27,795 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:14:28,565 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:14:28,611 INFO     [learner.py:607] ====Pushing takes 0.044272661209106445 s
+2021-08-05:23:14:35,205 INFO     [learner.py:527] ====Start train round 183
+2021-08-05:23:14:35,306 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:14:36,112 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:14:36,170 INFO     [learner.py:607] ====Pushing takes 0.054344892501831055 s
+2021-08-05:23:14:42,25 INFO     [learner.py:527] ====Start train round 184
+2021-08-05:23:14:42,135 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:14:42,887 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:14:42,931 INFO     [learner.py:607] ====Pushing takes 0.042644500732421875 s
+2021-08-05:23:14:50,162 INFO     [learner.py:527] ====Start train round 185
+2021-08-05:23:14:50,260 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:14:51,85 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:14:51,138 INFO     [learner.py:607] ====Pushing takes 0.04962921142578125 s
+2021-08-05:23:14:59,688 INFO     [learner.py:527] ====Start train round 186
+2021-08-05:23:14:59,804 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:15:00,567 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:15:00,623 INFO     [learner.py:607] ====Pushing takes 0.05434894561767578 s
+2021-08-05:23:15:03,856 INFO     [learner.py:527] ====Start train round 187
+2021-08-05:23:15:03,952 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:15:04,696 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:15:04,736 INFO     [learner.py:607] ====Pushing takes 0.038507699966430664 s
+2021-08-05:23:15:13,705 INFO     [learner.py:527] ====Start train round 188
+2021-08-05:23:15:13,800 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:15:14,617 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:15:14,661 INFO     [learner.py:607] ====Pushing takes 0.038022518157958984 s
+2021-08-05:23:15:17,579 INFO     [learner.py:527] ====Start train round 189
+2021-08-05:23:15:17,675 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:15:18,469 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:15:18,512 INFO     [learner.py:607] ====Pushing takes 0.04107356071472168 s
+2021-08-05:23:15:27,694 INFO     [learner.py:527] ====Start train round 190
+2021-08-05:23:15:27,793 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:15:28,462 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:15:28,497 INFO     [learner.py:607] ====Pushing takes 0.032392263412475586 s
+2021-08-05:23:16:43,61 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.4978, Top-1 Accuracy: 9669.0/27379 (0.3532), Top-5 Accuracy: 0.6567
+2021-08-05:23:16:43,72 INFO     [learner.py:657] After aggregation epoch 190, CumulTime 3042.326, eval_time 71.2381, test_loss 2.4978, test_accuracy 0.3532, test_5_accuracy 0.6567 
+
+2021-08-05:23:16:43,353 INFO     [learner.py:527] ====Start train round 191
+2021-08-05:23:16:43,444 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:16:44,268 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:16:44,383 INFO     [learner.py:607] ====Pushing takes 0.11217403411865234 s
+2021-08-05:23:16:51,727 INFO     [learner.py:527] ====Start train round 192
+2021-08-05:23:16:51,820 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:16:52,644 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:16:52,693 INFO     [learner.py:607] ====Pushing takes 0.047522544860839844 s
+2021-08-05:23:16:57,478 INFO     [learner.py:527] ====Start train round 193
+2021-08-05:23:16:57,568 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:16:58,358 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:16:58,462 INFO     [learner.py:607] ====Pushing takes 0.1011815071105957 s
+2021-08-05:23:17:05,726 INFO     [learner.py:527] ====Start train round 194
+2021-08-05:23:17:05,819 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:17:06,619 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:17:06,690 INFO     [learner.py:607] ====Pushing takes 0.06898784637451172 s
+2021-08-05:23:17:11,375 INFO     [learner.py:527] ====Start train round 195
+2021-08-05:23:17:11,470 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:17:12,269 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:17:12,335 INFO     [learner.py:607] ====Pushing takes 0.06166243553161621 s
+2021-08-05:23:17:19,728 INFO     [learner.py:527] ====Start train round 196
+2021-08-05:23:17:19,818 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:17:20,588 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:17:20,709 INFO     [learner.py:607] ====Pushing takes 0.11926984786987305 s
+2021-08-05:23:17:25,163 INFO     [learner.py:527] ====Start train round 197
+2021-08-05:23:17:25,264 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:17:25,959 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:17:26,34 INFO     [learner.py:607] ====Pushing takes 0.07275915145874023 s
+2021-08-05:23:17:33,729 INFO     [learner.py:527] ====Start train round 198
+2021-08-05:23:17:33,830 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:17:34,549 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:17:34,632 INFO     [learner.py:607] ====Pushing takes 0.07897591590881348 s
+2021-08-05:23:17:38,929 INFO     [learner.py:527] ====Start train round 199
+2021-08-05:23:17:38,992 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:17:39,707 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:17:39,756 INFO     [learner.py:607] ====Pushing takes 0.04655861854553223 s
+2021-08-05:23:17:47,734 INFO     [learner.py:527] ====Start train round 200
+2021-08-05:23:17:47,817 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:17:48,641 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:17:48,695 INFO     [learner.py:607] ====Pushing takes 0.0509791374206543 s
+2021-08-05:23:19:02,9 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.4857, Top-1 Accuracy: 9659.0/27379 (0.3528), Top-5 Accuracy: 0.6596
+2021-08-05:23:19:02,25 INFO     [learner.py:657] After aggregation epoch 200, CumulTime 3181.2789, eval_time 68.065, test_loss 2.4857, test_accuracy 0.3528, test_5_accuracy 0.6596 
+
+2021-08-05:23:19:02,314 INFO     [learner.py:527] ====Start train round 201
+2021-08-05:23:19:02,407 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:03,99 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:03,256 INFO     [learner.py:607] ====Pushing takes 0.15274906158447266 s
+2021-08-05:23:19:06,377 INFO     [learner.py:527] ====Start train round 202
+2021-08-05:23:19:06,491 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:07,230 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:07,325 INFO     [learner.py:607] ====Pushing takes 0.09264874458312988 s
+2021-08-05:23:19:11,778 INFO     [learner.py:527] ====Start train round 203
+2021-08-05:23:19:11,910 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:12,764 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:12,917 INFO     [learner.py:607] ====Pushing takes 0.1492786407470703 s
+2021-08-05:23:19:15,440 INFO     [learner.py:527] ====Start train round 204
+2021-08-05:23:19:15,562 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:16,354 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:16,503 INFO     [learner.py:607] ====Pushing takes 0.1464388370513916 s
+2021-08-05:23:19:19,25 INFO     [learner.py:527] ====Start train round 205
+2021-08-05:23:19:19,135 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:19,917 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:20,69 INFO     [learner.py:607] ====Pushing takes 0.1474604606628418 s
+2021-08-05:23:19:25,789 INFO     [learner.py:527] ====Start train round 206
+2021-08-05:23:19:25,873 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:26,772 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:26,848 INFO     [learner.py:607] ====Pushing takes 0.07372426986694336 s
+2021-08-05:23:19:29,535 INFO     [learner.py:527] ====Start train round 207
+2021-08-05:23:19:29,632 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:30,435 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:30,544 INFO     [learner.py:607] ====Pushing takes 0.10655021667480469 s
+2021-08-05:23:19:33,469 INFO     [learner.py:527] ====Start train round 208
+2021-08-05:23:19:33,569 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:34,419 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:34,517 INFO     [learner.py:607] ====Pushing takes 0.09573054313659668 s
+2021-08-05:23:19:39,779 INFO     [learner.py:527] ====Start train round 209
+2021-08-05:23:19:39,892 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:40,721 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:40,786 INFO     [learner.py:607] ====Pushing takes 0.06326460838317871 s
+2021-08-05:23:19:43,422 INFO     [learner.py:527] ====Start train round 210
+2021-08-05:23:19:43,515 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:19:44,497 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:19:44,576 INFO     [learner.py:607] ====Pushing takes 0.0771949291229248 s
+2021-08-05:23:20:55,442 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.4633, Top-1 Accuracy: 9941.0/27379 (0.3631), Top-5 Accuracy: 0.6607
+2021-08-05:23:20:55,457 INFO     [learner.py:657] After aggregation epoch 210, CumulTime 3294.7107, eval_time 68.3716, test_loss 2.4633, test_accuracy 0.3631, test_5_accuracy 0.6607 
+
+2021-08-05:23:20:55,838 INFO     [learner.py:527] ====Start train round 211
+2021-08-05:23:20:55,930 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:20:56,736 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:20:56,806 INFO     [learner.py:607] ====Pushing takes 0.06773996353149414 s
+2021-08-05:23:21:03,866 INFO     [learner.py:527] ====Start train round 212
+2021-08-05:23:21:03,960 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:04,757 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:04,835 INFO     [learner.py:607] ====Pushing takes 0.07582712173461914 s
+2021-08-05:23:21:07,531 INFO     [learner.py:527] ====Start train round 213
+2021-08-05:23:21:07,759 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:08,660 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:08,743 INFO     [learner.py:607] ====Pushing takes 0.07991456985473633 s
+2021-08-05:23:21:11,860 INFO     [learner.py:527] ====Start train round 214
+2021-08-05:23:21:11,994 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:12,815 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:12,865 INFO     [learner.py:607] ====Pushing takes 0.04815030097961426 s
+2021-08-05:23:21:17,826 INFO     [learner.py:527] ====Start train round 215
+2021-08-05:23:21:17,917 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:18,789 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:18,841 INFO     [learner.py:607] ====Pushing takes 0.04929232597351074 s
+2021-08-05:23:21:21,553 INFO     [learner.py:527] ====Start train round 216
+2021-08-05:23:21:21,655 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:22,473 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:22,565 INFO     [learner.py:607] ====Pushing takes 0.08763575553894043 s
+2021-08-05:23:21:25,478 INFO     [learner.py:527] ====Start train round 217
+2021-08-05:23:21:25,595 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:26,479 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:26,536 INFO     [learner.py:607] ====Pushing takes 0.05467820167541504 s
+2021-08-05:23:21:31,849 INFO     [learner.py:527] ====Start train round 218
+2021-08-05:23:21:31,948 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:32,637 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:32,687 INFO     [learner.py:607] ====Pushing takes 0.047683000564575195 s
+2021-08-05:23:21:35,501 INFO     [learner.py:527] ====Start train round 219
+2021-08-05:23:21:35,616 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:36,392 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:36,452 INFO     [learner.py:607] ====Pushing takes 0.056868791580200195 s
+2021-08-05:23:21:39,3 INFO     [learner.py:527] ====Start train round 220
+2021-08-05:23:21:39,95 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:21:39,916 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:21:39,956 INFO     [learner.py:607] ====Pushing takes 0.037308454513549805 s
+2021-08-05:23:22:55,145 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.4947, Top-1 Accuracy: 9861.0/27379 (0.3602), Top-5 Accuracy: 0.6536
+2021-08-05:23:22:55,163 INFO     [learner.py:657] After aggregation epoch 220, CumulTime 3414.4167, eval_time 69.3891, test_loss 2.4947, test_accuracy 0.3602, test_5_accuracy 0.6536 
+
+2021-08-05:23:22:55,840 INFO     [learner.py:527] ====Start train round 221
+2021-08-05:23:22:55,926 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:22:56,754 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:22:56,820 INFO     [learner.py:607] ====Pushing takes 0.06289434432983398 s
+2021-08-05:23:22:59,636 INFO     [learner.py:527] ====Start train round 222
+2021-08-05:23:22:59,738 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:00,458 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:00,507 INFO     [learner.py:607] ====Pushing takes 0.047434329986572266 s
+2021-08-05:23:23:03,467 INFO     [learner.py:527] ====Start train round 223
+2021-08-05:23:23:03,564 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:04,364 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:04,541 INFO     [learner.py:607] ====Pushing takes 0.17485976219177246 s
+2021-08-05:23:23:09,881 INFO     [learner.py:527] ====Start train round 224
+2021-08-05:23:23:09,974 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:10,914 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:11,9 INFO     [learner.py:607] ====Pushing takes 0.09319877624511719 s
+2021-08-05:23:23:13,703 INFO     [learner.py:527] ====Start train round 225
+2021-08-05:23:23:13,806 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:14,532 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:14,614 INFO     [learner.py:607] ====Pushing takes 0.07494211196899414 s
+2021-08-05:23:23:17,350 INFO     [learner.py:527] ====Start train round 226
+2021-08-05:23:23:17,442 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:18,232 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:18,319 INFO     [learner.py:607] ====Pushing takes 0.08442139625549316 s
+2021-08-05:23:23:23,875 INFO     [learner.py:527] ====Start train round 227
+2021-08-05:23:23:23,963 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:24,723 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:24,810 INFO     [learner.py:607] ====Pushing takes 0.08248305320739746 s
+2021-08-05:23:23:27,944 INFO     [learner.py:527] ====Start train round 228
+2021-08-05:23:23:28,51 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:28,892 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:28,959 INFO     [learner.py:607] ====Pushing takes 0.06421971321105957 s
+2021-08-05:23:23:31,796 INFO     [learner.py:527] ====Start train round 229
+2021-08-05:23:23:31,905 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:32,664 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:32,754 INFO     [learner.py:607] ====Pushing takes 0.08807015419006348 s
+2021-08-05:23:23:37,894 INFO     [learner.py:527] ====Start train round 230
+2021-08-05:23:23:37,999 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:23:38,880 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:23:38,971 INFO     [learner.py:607] ====Pushing takes 0.08589959144592285 s
+2021-08-05:23:24:50,342 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.4347, Top-1 Accuracy: 10146.0/27379 (0.3706), Top-5 Accuracy: 0.6661
+2021-08-05:23:24:50,353 INFO     [learner.py:657] After aggregation epoch 230, CumulTime 3529.6067, eval_time 68.388, test_loss 2.4347, test_accuracy 0.3706, test_5_accuracy 0.6661 
+
+2021-08-05:23:24:50,654 INFO     [learner.py:527] ====Start train round 231
+2021-08-05:23:24:50,795 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:24:51,904 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:24:52,4 INFO     [learner.py:607] ====Pushing takes 0.09754753112792969 s
+2021-08-05:23:24:55,508 INFO     [learner.py:527] ====Start train round 232
+2021-08-05:23:24:55,625 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:24:56,874 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:24:57,12 INFO     [learner.py:607] ====Pushing takes 0.11365914344787598 s
+2021-08-05:23:25:01,921 INFO     [learner.py:527] ====Start train round 233
+2021-08-05:23:25:02,20 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:25:02,688 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:25:02,760 INFO     [learner.py:607] ====Pushing takes 0.07031106948852539 s
+2021-08-05:23:25:05,772 INFO     [learner.py:527] ====Start train round 234
+2021-08-05:23:25:05,873 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:25:06,494 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:25:06,536 INFO     [learner.py:607] ====Pushing takes 0.039562225341796875 s
+2021-08-05:23:25:09,513 INFO     [learner.py:527] ====Start train round 235
+2021-08-05:23:25:09,607 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:25:10,346 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:25:10,451 INFO     [learner.py:607] ====Pushing takes 0.10197615623474121 s
+2021-08-05:23:25:15,949 INFO     [learner.py:527] ====Start train round 236
+2021-08-05:23:25:16,50 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:25:16,834 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:25:16,900 INFO     [learner.py:607] ====Pushing takes 0.06313633918762207 s
+2021-08-05:23:25:19,712 INFO     [learner.py:527] ====Start train round 237
+2021-08-05:23:25:19,834 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:25:20,455 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:25:20,516 INFO     [learner.py:607] ====Pushing takes 0.059432029724121094 s
+2021-08-05:23:25:23,587 INFO     [learner.py:527] ====Start train round 238
+2021-08-05:23:25:23,682 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:25:24,319 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:25:24,355 INFO     [learner.py:607] ====Pushing takes 0.034395694732666016 s
+2021-08-05:23:25:29,928 INFO     [learner.py:527] ====Start train round 239
+2021-08-05:23:25:30,42 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:25:30,767 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:25:30,816 INFO     [learner.py:607] ====Pushing takes 0.04640841484069824 s
+2021-08-05:23:25:33,957 INFO     [learner.py:527] ====Start train round 240
+2021-08-05:23:25:34,43 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:25:34,769 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:25:34,885 INFO     [learner.py:607] ====Pushing takes 0.10791611671447754 s
+2021-08-05:23:26:46,221 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.4064, Top-1 Accuracy: 10364.0/27379 (0.3785), Top-5 Accuracy: 0.6734
+2021-08-05:23:26:46,243 INFO     [learner.py:657] After aggregation epoch 240, CumulTime 3645.4966, eval_time 68.4942, test_loss 2.4064, test_accuracy 0.3785, test_5_accuracy 0.6734 
+
+2021-08-05:23:26:46,567 INFO     [learner.py:527] ====Start train round 241
+2021-08-05:23:26:46,664 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:26:47,305 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:26:47,375 INFO     [learner.py:607] ====Pushing takes 0.06777334213256836 s
+2021-08-05:23:26:53,961 INFO     [learner.py:527] ====Start train round 242
+2021-08-05:23:26:54,53 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:26:54,786 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:26:54,880 INFO     [learner.py:607] ====Pushing takes 0.09142303466796875 s
+2021-08-05:23:26:57,783 INFO     [learner.py:527] ====Start train round 243
+2021-08-05:23:26:57,891 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:26:58,509 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:26:58,567 INFO     [learner.py:607] ====Pushing takes 0.05563688278198242 s
+2021-08-05:23:27:01,336 INFO     [learner.py:527] ====Start train round 244
+2021-08-05:23:27:01,426 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:27:02,260 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:27:02,348 INFO     [learner.py:607] ====Pushing takes 0.08038163185119629 s
+2021-08-05:23:27:07,979 INFO     [learner.py:527] ====Start train round 245
+2021-08-05:23:27:08,73 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:27:08,861 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:27:08,912 INFO     [learner.py:607] ====Pushing takes 0.048661231994628906 s
+2021-08-05:23:27:11,606 INFO     [learner.py:527] ====Start train round 246
+2021-08-05:23:27:11,717 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:27:12,467 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:27:12,502 INFO     [learner.py:607] ====Pushing takes 0.03288841247558594 s
+2021-08-05:23:27:15,365 INFO     [learner.py:527] ====Start train round 247
+2021-08-05:23:27:15,461 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:27:16,168 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:27:16,267 INFO     [learner.py:607] ====Pushing takes 0.09424972534179688 s
+2021-08-05:23:27:21,976 INFO     [learner.py:527] ====Start train round 248
+2021-08-05:23:27:22,120 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:27:22,888 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:27:22,940 INFO     [learner.py:607] ====Pushing takes 0.04932236671447754 s
+2021-08-05:23:27:25,536 INFO     [learner.py:527] ====Start train round 249
+2021-08-05:23:27:25,647 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:27:26,409 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:27:26,476 INFO     [learner.py:607] ====Pushing takes 0.06549692153930664 s
+2021-08-05:23:27:28,964 INFO     [learner.py:527] ====Start train round 250
+2021-08-05:23:27:29,79 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:27:29,701 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:27:29,763 INFO     [learner.py:607] ====Pushing takes 0.05943560600280762 s
+2021-08-05:23:28:44,409 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.407, Top-1 Accuracy: 10324.0/27379 (0.3771), Top-5 Accuracy: 0.6728
+2021-08-05:23:28:44,427 INFO     [learner.py:657] After aggregation epoch 250, CumulTime 3763.681, eval_time 68.5212, test_loss 2.407, test_accuracy 0.3771, test_5_accuracy 0.6728 
+
+2021-08-05:23:28:44,742 INFO     [learner.py:527] ====Start train round 251
+2021-08-05:23:28:44,833 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:28:45,568 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:28:45,642 INFO     [learner.py:607] ====Pushing takes 0.07137155532836914 s
+2021-08-05:23:28:49,679 INFO     [learner.py:527] ====Start train round 252
+2021-08-05:23:28:49,769 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:28:50,525 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:28:50,618 INFO     [learner.py:607] ====Pushing takes 0.08565330505371094 s
+2021-08-05:23:28:53,321 INFO     [learner.py:527] ====Start train round 253
+2021-08-05:23:28:53,426 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:28:54,174 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:28:54,240 INFO     [learner.py:607] ====Pushing takes 0.0633840560913086 s
+2021-08-05:23:29:00,23 INFO     [learner.py:527] ====Start train round 254
+2021-08-05:23:29:00,125 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:29:00,859 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:29:00,919 INFO     [learner.py:607] ====Pushing takes 0.057702064514160156 s
+2021-08-05:23:29:03,734 INFO     [learner.py:527] ====Start train round 255
+2021-08-05:23:29:03,830 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:29:04,542 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:29:04,579 INFO     [learner.py:607] ====Pushing takes 0.03468203544616699 s
+2021-08-05:23:29:07,393 INFO     [learner.py:527] ====Start train round 256
+2021-08-05:23:29:07,497 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:29:08,192 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:29:08,264 INFO     [learner.py:607] ====Pushing takes 0.06949496269226074 s
+2021-08-05:23:29:13,995 INFO     [learner.py:527] ====Start train round 257
+2021-08-05:23:29:14,93 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:29:14,745 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:29:14,778 INFO     [learner.py:607] ====Pushing takes 0.031345367431640625 s
+2021-08-05:23:29:17,905 INFO     [learner.py:527] ====Start train round 258
+2021-08-05:23:29:18,9 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:29:18,748 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:29:18,794 INFO     [learner.py:607] ====Pushing takes 0.04395413398742676 s
+2021-08-05:23:29:21,487 INFO     [learner.py:527] ====Start train round 259
+2021-08-05:23:29:21,572 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:29:22,224 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:29:22,268 INFO     [learner.py:607] ====Pushing takes 0.04220271110534668 s
+2021-08-05:23:29:28,5 INFO     [learner.py:527] ====Start train round 260
+2021-08-05:23:29:28,103 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:29:28,783 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:29:28,822 INFO     [learner.py:607] ====Pushing takes 0.03648185729980469 s
+2021-08-05:23:30:41,93 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.4083, Top-1 Accuracy: 10392.0/27379 (0.3796), Top-5 Accuracy: 0.6714
+2021-08-05:23:30:41,105 INFO     [learner.py:657] After aggregation epoch 260, CumulTime 3880.3587, eval_time 69.5593, test_loss 2.4083, test_accuracy 0.3796, test_5_accuracy 0.6714 
+
+2021-08-05:23:30:41,408 INFO     [learner.py:527] ====Start train round 261
+2021-08-05:23:30:41,534 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:30:42,419 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:30:42,470 INFO     [learner.py:607] ====Pushing takes 0.04798078536987305 s
+2021-08-05:23:30:44,690 INFO     [learner.py:527] ====Start train round 262
+2021-08-05:23:30:44,791 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:30:45,696 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:30:45,788 INFO     [learner.py:607] ====Pushing takes 0.08985304832458496 s
+2021-08-05:23:30:48,391 INFO     [learner.py:527] ====Start train round 263
+2021-08-05:23:30:48,486 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:30:50,19 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:30:50,156 INFO     [learner.py:607] ====Pushing takes 0.13470673561096191 s
+2021-08-05:23:30:52,176 INFO     [learner.py:527] ====Start train round 264
+2021-08-05:23:30:52,269 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:30:52,961 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:30:53,18 INFO     [learner.py:607] ====Pushing takes 0.05543923377990723 s
+2021-08-05:23:30:55,730 INFO     [learner.py:527] ====Start train round 265
+2021-08-05:23:30:55,830 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:30:56,604 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:30:56,644 INFO     [learner.py:607] ====Pushing takes 0.037607669830322266 s
+2021-08-05:23:30:59,555 INFO     [learner.py:527] ====Start train round 266
+2021-08-05:23:30:59,645 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:31:00,315 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:31:00,420 INFO     [learner.py:607] ====Pushing takes 0.10243582725524902 s
+2021-08-05:23:31:06,79 INFO     [learner.py:527] ====Start train round 267
+2021-08-05:23:31:06,200 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:31:06,937 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:31:07,17 INFO     [learner.py:607] ====Pushing takes 0.07864952087402344 s
+2021-08-05:23:31:09,905 INFO     [learner.py:527] ====Start train round 268
+2021-08-05:23:31:10,12 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:31:10,764 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:31:10,798 INFO     [learner.py:607] ====Pushing takes 0.03168344497680664 s
+2021-08-05:23:31:14,719 INFO     [learner.py:527] ====Start train round 269
+2021-08-05:23:31:14,856 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:31:15,737 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:31:15,794 INFO     [learner.py:607] ====Pushing takes 0.047473907470703125 s
+2021-08-05:23:31:20,50 INFO     [learner.py:527] ====Start train round 270
+2021-08-05:23:31:20,156 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:31:20,834 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:31:20,931 INFO     [learner.py:607] ====Pushing takes 0.09571146965026855 s
+2021-08-05:23:32:32,727 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3492, Top-1 Accuracy: 10665.0/27379 (0.3895), Top-5 Accuracy: 0.6814
+2021-08-05:23:32:32,732 INFO     [learner.py:657] After aggregation epoch 270, CumulTime 3991.9858, eval_time 69.2222, test_loss 2.3492, test_accuracy 0.3895, test_5_accuracy 0.6814 
+
+2021-08-05:23:32:33,43 INFO     [learner.py:527] ====Start train round 271
+2021-08-05:23:32:33,152 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:32:33,891 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:32:33,956 INFO     [learner.py:607] ====Pushing takes 0.06254243850708008 s
+2021-08-05:23:32:35,587 INFO     [learner.py:527] ====Start train round 272
+2021-08-05:23:32:35,696 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:32:36,514 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:32:36,558 INFO     [learner.py:607] ====Pushing takes 0.042253971099853516 s
+2021-08-05:23:32:39,86 INFO     [learner.py:527] ====Start train round 273
+2021-08-05:23:32:39,187 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:32:39,917 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:32:39,958 INFO     [learner.py:607] ====Pushing takes 0.03922224044799805 s
+2021-08-05:23:32:44,99 INFO     [learner.py:527] ====Start train round 274
+2021-08-05:23:32:44,197 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:32:44,963 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:32:45,3 INFO     [learner.py:607] ====Pushing takes 0.03785228729248047 s
+2021-08-05:23:32:47,596 INFO     [learner.py:527] ====Start train round 275
+2021-08-05:23:32:47,696 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:32:48,434 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:32:48,502 INFO     [learner.py:607] ====Pushing takes 0.06546735763549805 s
+2021-08-05:23:32:51,139 INFO     [learner.py:527] ====Start train round 276
+2021-08-05:23:32:51,237 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:32:51,951 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:32:52,22 INFO     [learner.py:607] ====Pushing takes 0.06853485107421875 s
+2021-08-05:23:32:58,104 INFO     [learner.py:527] ====Start train round 277
+2021-08-05:23:32:58,199 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:32:58,933 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:32:58,976 INFO     [learner.py:607] ====Pushing takes 0.0412898063659668 s
+2021-08-05:23:33:01,879 INFO     [learner.py:527] ====Start train round 278
+2021-08-05:23:33:01,965 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:33:02,588 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:33:02,622 INFO     [learner.py:607] ====Pushing takes 0.03268122673034668 s
+2021-08-05:23:33:05,436 INFO     [learner.py:527] ====Start train round 279
+2021-08-05:23:33:05,567 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:33:06,405 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:33:06,437 INFO     [learner.py:607] ====Pushing takes 0.029602527618408203 s
+2021-08-05:23:33:12,91 INFO     [learner.py:527] ====Start train round 280
+2021-08-05:23:33:12,178 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:33:12,797 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:33:12,832 INFO     [learner.py:607] ====Pushing takes 0.033106088638305664 s
+2021-08-05:23:34:26,91 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3889, Top-1 Accuracy: 10473.0/27379 (0.3825), Top-5 Accuracy: 0.6774
+2021-08-05:23:34:26,111 INFO     [learner.py:657] After aggregation epoch 280, CumulTime 4105.3648, eval_time 70.5633, test_loss 2.3889, test_accuracy 0.3825, test_5_accuracy 0.6774 
+
+2021-08-05:23:34:26,534 INFO     [learner.py:527] ====Start train round 281
+2021-08-05:23:34:26,601 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:27,359 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:27,489 INFO     [learner.py:607] ====Pushing takes 0.1267261505126953 s
+2021-08-05:23:34:28,825 INFO     [learner.py:527] ====Start train round 282
+2021-08-05:23:34:28,892 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:29,683 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:29,753 INFO     [learner.py:607] ====Pushing takes 0.06802010536193848 s
+2021-08-05:23:34:32,353 INFO     [learner.py:527] ====Start train round 283
+2021-08-05:23:34:32,454 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:33,156 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:33,260 INFO     [learner.py:607] ====Pushing takes 0.10216069221496582 s
+2021-08-05:23:34:36,155 INFO     [learner.py:527] ====Start train round 284
+2021-08-05:23:34:36,259 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:36,976 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:37,23 INFO     [learner.py:607] ====Pushing takes 0.045270681381225586 s
+2021-08-05:23:34:39,848 INFO     [learner.py:527] ====Start train round 285
+2021-08-05:23:34:39,946 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:40,760 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:40,823 INFO     [learner.py:607] ====Pushing takes 0.06135869026184082 s
+2021-08-05:23:34:43,714 INFO     [learner.py:527] ====Start train round 286
+2021-08-05:23:34:43,814 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:44,598 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:44,664 INFO     [learner.py:607] ====Pushing takes 0.05857372283935547 s
+2021-08-05:23:34:50,127 INFO     [learner.py:527] ====Start train round 287
+2021-08-05:23:34:50,214 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:51,121 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:51,156 INFO     [learner.py:607] ====Pushing takes 0.03245663642883301 s
+2021-08-05:23:34:54,660 INFO     [learner.py:527] ====Start train round 288
+2021-08-05:23:34:54,750 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:55,468 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:55,521 INFO     [learner.py:607] ====Pushing takes 0.0514674186706543 s
+2021-08-05:23:34:58,401 INFO     [learner.py:527] ====Start train round 289
+2021-08-05:23:34:58,489 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:34:59,250 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:34:59,297 INFO     [learner.py:607] ====Pushing takes 0.04464912414550781 s
+2021-08-05:23:35:04,128 INFO     [learner.py:527] ====Start train round 290
+2021-08-05:23:35:04,226 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:35:04,946 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:35:05,31 INFO     [learner.py:607] ====Pushing takes 0.08344221115112305 s
+2021-08-05:23:36:16,494 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3243, Top-1 Accuracy: 10708.0/27379 (0.3911), Top-5 Accuracy: 0.6888
+2021-08-05:23:36:16,541 INFO     [learner.py:657] After aggregation epoch 290, CumulTime 4215.7945, eval_time 68.6072, test_loss 2.3243, test_accuracy 0.3911, test_5_accuracy 0.6888 
+
+2021-08-05:23:36:16,834 INFO     [learner.py:527] ====Start train round 291
+2021-08-05:23:36:16,930 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:17,873 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:17,949 INFO     [learner.py:607] ====Pushing takes 0.06863617897033691 s
+2021-08-05:23:36:20,820 INFO     [learner.py:527] ====Start train round 292
+2021-08-05:23:36:20,913 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:21,784 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:21,858 INFO     [learner.py:607] ====Pushing takes 0.072021484375 s
+2021-08-05:23:36:24,267 INFO     [learner.py:527] ====Start train round 293
+2021-08-05:23:36:24,364 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:25,107 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:25,176 INFO     [learner.py:607] ====Pushing takes 0.06238961219787598 s
+2021-08-05:23:36:28,942 INFO     [learner.py:527] ====Start train round 294
+2021-08-05:23:36:29,41 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:29,758 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:29,817 INFO     [learner.py:607] ====Pushing takes 0.05601096153259277 s
+2021-08-05:23:36:32,308 INFO     [learner.py:527] ====Start train round 295
+2021-08-05:23:36:32,404 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:33,97 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:33,191 INFO     [learner.py:607] ====Pushing takes 0.09129643440246582 s
+2021-08-05:23:36:35,739 INFO     [learner.py:527] ====Start train round 296
+2021-08-05:23:36:35,832 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:36,674 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:36,708 INFO     [learner.py:607] ====Pushing takes 0.03229570388793945 s
+2021-08-05:23:36:42,156 INFO     [learner.py:527] ====Start train round 297
+2021-08-05:23:36:42,241 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:42,971 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:43,42 INFO     [learner.py:607] ====Pushing takes 0.0644071102142334 s
+2021-08-05:23:36:45,932 INFO     [learner.py:527] ====Start train round 298
+2021-08-05:23:36:46,29 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:46,743 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:46,823 INFO     [learner.py:607] ====Pushing takes 0.07821822166442871 s
+2021-08-05:23:36:49,438 INFO     [learner.py:527] ====Start train round 299
+2021-08-05:23:36:49,557 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:50,256 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:50,311 INFO     [learner.py:607] ====Pushing takes 0.05301523208618164 s
+2021-08-05:23:36:56,163 INFO     [learner.py:527] ====Start train round 300
+2021-08-05:23:36:56,302 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:36:57,34 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:36:57,84 INFO     [learner.py:607] ====Pushing takes 0.0477602481842041 s
+2021-08-05:23:38:08,425 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3595, Top-1 Accuracy: 10698.0/27379 (0.3907), Top-5 Accuracy: 0.6827
+2021-08-05:23:38:08,429 INFO     [learner.py:657] After aggregation epoch 300, CumulTime 4327.6828, eval_time 68.622, test_loss 2.3595, test_accuracy 0.3907, test_5_accuracy 0.6827 
+
+2021-08-05:23:38:08,735 INFO     [learner.py:527] ====Start train round 301
+2021-08-05:23:38:08,829 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:09,593 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:09,681 INFO     [learner.py:607] ====Pushing takes 0.08237791061401367 s
+2021-08-05:23:38:11,340 INFO     [learner.py:527] ====Start train round 302
+2021-08-05:23:38:11,439 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:12,197 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:12,272 INFO     [learner.py:607] ====Pushing takes 0.0730750560760498 s
+2021-08-05:23:38:14,726 INFO     [learner.py:527] ====Start train round 303
+2021-08-05:23:38:14,842 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:15,582 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:15,622 INFO     [learner.py:607] ====Pushing takes 0.0380253791809082 s
+2021-08-05:23:38:20,215 INFO     [learner.py:527] ====Start train round 304
+2021-08-05:23:38:20,310 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:21,50 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:21,112 INFO     [learner.py:607] ====Pushing takes 0.05996108055114746 s
+2021-08-05:23:38:23,598 INFO     [learner.py:527] ====Start train round 305
+2021-08-05:23:38:23,691 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:24,342 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:24,430 INFO     [learner.py:607] ====Pushing takes 0.08037066459655762 s
+2021-08-05:23:38:27,20 INFO     [learner.py:527] ====Start train round 306
+2021-08-05:23:38:27,124 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:27,849 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:27,913 INFO     [learner.py:607] ====Pushing takes 0.06162261962890625 s
+2021-08-05:23:38:30,620 INFO     [learner.py:527] ====Start train round 307
+2021-08-05:23:38:30,723 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:31,396 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:31,460 INFO     [learner.py:607] ====Pushing takes 0.06212878227233887 s
+2021-08-05:23:38:34,185 INFO     [learner.py:527] ====Start train round 308
+2021-08-05:23:38:34,292 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:35,0 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:35,88 INFO     [learner.py:607] ====Pushing takes 0.08569884300231934 s
+2021-08-05:23:38:37,564 INFO     [learner.py:527] ====Start train round 309
+2021-08-05:23:38:37,652 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:38,521 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:38,552 INFO     [learner.py:607] ====Pushing takes 0.028980016708374023 s
+2021-08-05:23:38:41,29 INFO     [learner.py:527] ====Start train round 310
+2021-08-05:23:38:41,96 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:38:41,789 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:38:41,863 INFO     [learner.py:607] ====Pushing takes 0.07284975051879883 s
+2021-08-05:23:39:53,722 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2987, Top-1 Accuracy: 10951.0/27379 (0.4), Top-5 Accuracy: 0.6948
+2021-08-05:23:39:53,734 INFO     [learner.py:657] After aggregation epoch 310, CumulTime 4432.9875, eval_time 69.3644, test_loss 2.2987, test_accuracy 0.4, test_5_accuracy 0.6948 
+
+2021-08-05:23:39:54,56 INFO     [learner.py:527] ====Start train round 311
+2021-08-05:23:39:54,147 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:39:54,892 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:39:54,946 INFO     [learner.py:607] ====Pushing takes 0.051788330078125 s
+2021-08-05:23:40:01,50 INFO     [learner.py:527] ====Start train round 312
+2021-08-05:23:40:01,146 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:01,960 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:02,35 INFO     [learner.py:607] ====Pushing takes 0.07230591773986816 s
+2021-08-05:23:40:04,551 INFO     [learner.py:527] ====Start train round 313
+2021-08-05:23:40:04,649 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:05,394 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:05,483 INFO     [learner.py:607] ====Pushing takes 0.08682489395141602 s
+2021-08-05:23:40:08,174 INFO     [learner.py:527] ====Start train round 314
+2021-08-05:23:40:08,276 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:09,14 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:09,55 INFO     [learner.py:607] ====Pushing takes 0.038741111755371094 s
+2021-08-05:23:40:12,208 INFO     [learner.py:527] ====Start train round 315
+2021-08-05:23:40:12,297 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:13,45 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:13,115 INFO     [learner.py:607] ====Pushing takes 0.06734013557434082 s
+2021-08-05:23:40:15,659 INFO     [learner.py:527] ====Start train round 316
+2021-08-05:23:40:15,757 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:16,460 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:16,545 INFO     [learner.py:607] ====Pushing takes 0.07642221450805664 s
+2021-08-05:23:40:19,33 INFO     [learner.py:527] ====Start train round 317
+2021-08-05:23:40:19,131 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:19,868 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:19,939 INFO     [learner.py:607] ====Pushing takes 0.06873750686645508 s
+2021-08-05:23:40:22,600 INFO     [learner.py:527] ====Start train round 318
+2021-08-05:23:40:22,706 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:23,587 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:23,636 INFO     [learner.py:607] ====Pushing takes 0.04696321487426758 s
+2021-08-05:23:40:26,236 INFO     [learner.py:527] ====Start train round 319
+2021-08-05:23:40:26,363 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:27,109 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:27,154 INFO     [learner.py:607] ====Pushing takes 0.04323244094848633 s
+2021-08-05:23:40:30,566 INFO     [learner.py:527] ====Start train round 320
+2021-08-05:23:40:30,681 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:40:31,746 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:40:31,779 INFO     [learner.py:607] ====Pushing takes 0.030472755432128906 s
+2021-08-05:23:41:45,544 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3073, Top-1 Accuracy: 10998.0/27379 (0.4017), Top-5 Accuracy: 0.6943
+2021-08-05:23:41:45,549 INFO     [learner.py:657] After aggregation epoch 320, CumulTime 4544.8026, eval_time 71.1094, test_loss 2.3073, test_accuracy 0.4017, test_5_accuracy 0.6943 
+
+2021-08-05:23:41:45,825 INFO     [learner.py:527] ====Start train round 321
+2021-08-05:23:41:45,913 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:41:46,656 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:41:46,721 INFO     [learner.py:607] ====Pushing takes 0.06277728080749512 s
+2021-08-05:23:41:50,263 INFO     [learner.py:527] ====Start train round 322
+2021-08-05:23:41:50,383 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:41:51,72 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:41:51,167 INFO     [learner.py:607] ====Pushing takes 0.09247207641601562 s
+2021-08-05:23:41:53,826 INFO     [learner.py:527] ====Start train round 323
+2021-08-05:23:41:53,930 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:41:54,699 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:41:54,767 INFO     [learner.py:607] ====Pushing takes 0.06525421142578125 s
+2021-08-05:23:41:57,322 INFO     [learner.py:527] ====Start train round 324
+2021-08-05:23:41:57,435 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:41:58,246 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:41:58,287 INFO     [learner.py:607] ====Pushing takes 0.0389704704284668 s
+2021-08-05:23:42:04,263 INFO     [learner.py:527] ====Start train round 325
+2021-08-05:23:42:04,362 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:42:05,120 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:42:05,215 INFO     [learner.py:607] ====Pushing takes 0.09221053123474121 s
+2021-08-05:23:42:07,854 INFO     [learner.py:527] ====Start train round 326
+2021-08-05:23:42:07,983 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:42:08,884 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:42:08,954 INFO     [learner.py:607] ====Pushing takes 0.06724047660827637 s
+2021-08-05:23:42:11,354 INFO     [learner.py:527] ====Start train round 327
+2021-08-05:23:42:11,451 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:42:12,206 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:42:12,243 INFO     [learner.py:607] ====Pushing takes 0.03416562080383301 s
+2021-08-05:23:42:18,263 INFO     [learner.py:527] ====Start train round 328
+2021-08-05:23:42:18,351 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:42:19,122 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:42:19,170 INFO     [learner.py:607] ====Pushing takes 0.04596853256225586 s
+2021-08-05:23:42:21,720 INFO     [learner.py:527] ====Start train round 329
+2021-08-05:23:42:21,827 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:42:22,594 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:42:22,688 INFO     [learner.py:607] ====Pushing takes 0.08812284469604492 s
+2021-08-05:23:42:25,131 INFO     [learner.py:527] ====Start train round 330
+2021-08-05:23:42:25,225 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:42:25,992 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:42:26,70 INFO     [learner.py:607] ====Pushing takes 0.07532405853271484 s
+2021-08-05:23:43:36,668 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3211, Top-1 Accuracy: 10969.0/27379 (0.4006), Top-5 Accuracy: 0.6917
+2021-08-05:23:43:36,672 INFO     [learner.py:657] After aggregation epoch 330, CumulTime 4655.9253, eval_time 68.2359, test_loss 2.3211, test_accuracy 0.4006, test_5_accuracy 0.6917 
+
+2021-08-05:23:43:36,965 INFO     [learner.py:527] ====Start train round 331
+2021-08-05:23:43:37,80 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:43:37,854 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:43:37,925 INFO     [learner.py:607] ====Pushing takes 0.06815838813781738 s
+2021-08-05:23:43:42,293 INFO     [learner.py:527] ====Start train round 332
+2021-08-05:23:43:42,404 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:43:43,140 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:43:43,214 INFO     [learner.py:607] ====Pushing takes 0.07240104675292969 s
+2021-08-05:23:43:45,496 INFO     [learner.py:527] ====Start train round 333
+2021-08-05:23:43:45,596 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:43:46,461 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:43:46,522 INFO     [learner.py:607] ====Pushing takes 0.05675339698791504 s
+2021-08-05:23:43:48,673 INFO     [learner.py:527] ====Start train round 334
+2021-08-05:23:43:48,776 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:43:49,625 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:43:49,667 INFO     [learner.py:607] ====Pushing takes 0.04016518592834473 s
+2021-08-05:23:43:51,903 INFO     [learner.py:527] ====Start train round 335
+2021-08-05:23:43:52,9 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:43:52,786 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:43:52,881 INFO     [learner.py:607] ====Pushing takes 0.09133768081665039 s
+2021-08-05:23:43:56,320 INFO     [learner.py:527] ====Start train round 336
+2021-08-05:23:43:56,408 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:43:57,133 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:43:57,177 INFO     [learner.py:607] ====Pushing takes 0.04201555252075195 s
+2021-08-05:23:43:59,618 INFO     [learner.py:527] ====Start train round 337
+2021-08-05:23:43:59,728 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:44:00,441 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:44:00,530 INFO     [learner.py:607] ====Pushing takes 0.08659911155700684 s
+2021-08-05:23:44:03,295 INFO     [learner.py:527] ====Start train round 338
+2021-08-05:23:44:03,392 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:44:04,132 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:44:04,221 INFO     [learner.py:607] ====Pushing takes 0.08571195602416992 s
+2021-08-05:23:44:10,318 INFO     [learner.py:527] ====Start train round 339
+2021-08-05:23:44:10,424 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:44:11,196 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:44:11,240 INFO     [learner.py:607] ====Pushing takes 0.04232358932495117 s
+2021-08-05:23:44:13,604 INFO     [learner.py:527] ====Start train round 340
+2021-08-05:23:44:13,705 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:44:14,514 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:44:14,553 INFO     [learner.py:607] ====Pushing takes 0.0357515811920166 s
+2021-08-05:23:45:26,67 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3001, Top-1 Accuracy: 11044.0/27379 (0.4034), Top-5 Accuracy: 0.694
+2021-08-05:23:45:26,81 INFO     [learner.py:657] After aggregation epoch 340, CumulTime 4765.3346, eval_time 69.2713, test_loss 2.3001, test_accuracy 0.4034, test_5_accuracy 0.694 
+
+2021-08-05:23:45:26,367 INFO     [learner.py:527] ====Start train round 341
+2021-08-05:23:45:26,459 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:45:27,155 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:45:27,225 INFO     [learner.py:607] ====Pushing takes 0.06619119644165039 s
+2021-08-05:23:45:34,348 INFO     [learner.py:527] ====Start train round 342
+2021-08-05:23:45:34,472 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:45:35,359 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:45:35,423 INFO     [learner.py:607] ====Pushing takes 0.06277680397033691 s
+2021-08-05:23:45:37,894 INFO     [learner.py:527] ====Start train round 343
+2021-08-05:23:45:38,10 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:45:38,810 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:45:38,888 INFO     [learner.py:607] ====Pushing takes 0.0755009651184082 s
+2021-08-05:23:45:41,35 INFO     [learner.py:527] ====Start train round 344
+2021-08-05:23:45:41,143 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:45:41,922 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:45:41,976 INFO     [learner.py:607] ====Pushing takes 0.05169796943664551 s
+2021-08-05:23:45:44,381 INFO     [learner.py:527] ====Start train round 345
+2021-08-05:23:45:44,522 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:45:45,351 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:45:45,402 INFO     [learner.py:607] ====Pushing takes 0.04578685760498047 s
+2021-08-05:23:45:48,357 INFO     [learner.py:527] ====Start train round 346
+2021-08-05:23:45:48,466 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:45:49,187 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:45:49,230 INFO     [learner.py:607] ====Pushing takes 0.040863990783691406 s
+2021-08-05:23:45:52,590 INFO     [learner.py:527] ====Start train round 347
+2021-08-05:23:45:52,688 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:45:53,919 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:45:54,20 INFO     [learner.py:607] ====Pushing takes 0.07760167121887207 s
+2021-08-05:23:45:56,579 INFO     [learner.py:527] ====Start train round 348
+2021-08-05:23:45:56,678 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:45:57,304 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:45:57,379 INFO     [learner.py:607] ====Pushing takes 0.07172632217407227 s
+2021-08-05:23:46:02,365 INFO     [learner.py:527] ====Start train round 349
+2021-08-05:23:46:02,469 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:46:03,140 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:46:03,236 INFO     [learner.py:607] ====Pushing takes 0.09315085411071777 s
+2021-08-05:23:46:05,595 INFO     [learner.py:527] ====Start train round 350
+2021-08-05:23:46:05,715 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:46:06,335 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:46:06,449 INFO     [learner.py:607] ====Pushing takes 0.11034989356994629 s
+2021-08-05:23:47:18,180 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3145, Top-1 Accuracy: 11020.0/27379 (0.4025), Top-5 Accuracy: 0.6912
+2021-08-05:23:47:18,199 INFO     [learner.py:657] After aggregation epoch 350, CumulTime 4877.4525, eval_time 69.5019, test_loss 2.3145, test_accuracy 0.4025, test_5_accuracy 0.6912 
+
+2021-08-05:23:47:18,513 INFO     [learner.py:527] ====Start train round 351
+2021-08-05:23:47:18,614 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:19,249 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:19,315 INFO     [learner.py:607] ====Pushing takes 0.06361246109008789 s
+2021-08-05:23:47:22,209 INFO     [learner.py:527] ====Start train round 352
+2021-08-05:23:47:22,310 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:22,998 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:23,84 INFO     [learner.py:607] ====Pushing takes 0.0840003490447998 s
+2021-08-05:23:47:26,381 INFO     [learner.py:527] ====Start train round 353
+2021-08-05:23:47:26,469 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:27,135 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:27,190 INFO     [learner.py:607] ====Pushing takes 0.05306053161621094 s
+2021-08-05:23:47:29,481 INFO     [learner.py:527] ====Start train round 354
+2021-08-05:23:47:29,578 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:30,247 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:30,340 INFO     [learner.py:607] ====Pushing takes 0.09055709838867188 s
+2021-08-05:23:47:32,740 INFO     [learner.py:527] ====Start train round 355
+2021-08-05:23:47:32,829 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:33,501 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:33,587 INFO     [learner.py:607] ====Pushing takes 0.08339834213256836 s
+2021-08-05:23:47:35,932 INFO     [learner.py:527] ====Start train round 356
+2021-08-05:23:47:36,35 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:36,659 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:36,725 INFO     [learner.py:607] ====Pushing takes 0.06430268287658691 s
+2021-08-05:23:47:40,384 INFO     [learner.py:527] ====Start train round 357
+2021-08-05:23:47:40,479 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:41,98 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:41,142 INFO     [learner.py:607] ====Pushing takes 0.04162788391113281 s
+2021-08-05:23:47:43,778 INFO     [learner.py:527] ====Start train round 358
+2021-08-05:23:47:43,882 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:44,532 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:44,627 INFO     [learner.py:607] ====Pushing takes 0.09252643585205078 s
+2021-08-05:23:47:46,888 INFO     [learner.py:527] ====Start train round 359
+2021-08-05:23:47:46,976 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:47,772 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:47,829 INFO     [learner.py:607] ====Pushing takes 0.053888559341430664 s
+2021-08-05:23:47:50,156 INFO     [learner.py:527] ====Start train round 360
+2021-08-05:23:47:50,267 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:47:50,913 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:47:50,997 INFO     [learner.py:607] ====Pushing takes 0.08170080184936523 s
+2021-08-05:23:49:02,549 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2917, Top-1 Accuracy: 11087.0/27379 (0.4049), Top-5 Accuracy: 0.696
+2021-08-05:23:49:02,552 INFO     [learner.py:657] After aggregation epoch 360, CumulTime 4981.8057, eval_time 68.2173, test_loss 2.2917, test_accuracy 0.4049, test_5_accuracy 0.696 
+
+2021-08-05:23:49:02,825 INFO     [learner.py:527] ====Start train round 361
+2021-08-05:23:49:02,956 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:03,583 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:03,636 INFO     [learner.py:607] ====Pushing takes 0.05131268501281738 s
+2021-08-05:23:49:06,12 INFO     [learner.py:527] ====Start train round 362
+2021-08-05:23:49:06,109 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:06,821 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:06,914 INFO     [learner.py:607] ====Pushing takes 0.08953285217285156 s
+2021-08-05:23:49:09,348 INFO     [learner.py:527] ====Start train round 363
+2021-08-05:23:49:09,445 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:10,100 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:10,206 INFO     [learner.py:607] ====Pushing takes 0.10252642631530762 s
+2021-08-05:23:49:12,564 INFO     [learner.py:527] ====Start train round 364
+2021-08-05:23:49:12,655 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:13,281 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:13,343 INFO     [learner.py:607] ====Pushing takes 0.05966353416442871 s
+2021-08-05:23:49:18,424 INFO     [learner.py:527] ====Start train round 365
+2021-08-05:23:49:18,514 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:19,172 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:19,216 INFO     [learner.py:607] ====Pushing takes 0.04288625717163086 s
+2021-08-05:23:49:21,586 INFO     [learner.py:527] ====Start train round 366
+2021-08-05:23:49:21,701 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:22,390 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:22,448 INFO     [learner.py:607] ====Pushing takes 0.054392099380493164 s
+2021-08-05:23:49:24,753 INFO     [learner.py:527] ====Start train round 367
+2021-08-05:23:49:24,854 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:25,638 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:25,705 INFO     [learner.py:607] ====Pushing takes 0.051642656326293945 s
+2021-08-05:23:49:28,228 INFO     [learner.py:527] ====Start train round 368
+2021-08-05:23:49:28,339 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:29,25 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:29,101 INFO     [learner.py:607] ====Pushing takes 0.07280850410461426 s
+2021-08-05:23:49:32,443 INFO     [learner.py:527] ====Start train round 369
+2021-08-05:23:49:32,550 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:33,217 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:33,288 INFO     [learner.py:607] ====Pushing takes 0.06952142715454102 s
+2021-08-05:23:49:35,595 INFO     [learner.py:527] ====Start train round 370
+2021-08-05:23:49:35,719 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:49:36,342 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:49:36,400 INFO     [learner.py:607] ====Pushing takes 0.056070566177368164 s
+2021-08-05:23:50:46,397 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3013, Top-1 Accuracy: 10983.0/27379 (0.4011), Top-5 Accuracy: 0.6944
+2021-08-05:23:50:46,404 INFO     [learner.py:657] After aggregation epoch 370, CumulTime 5085.6575, eval_time 67.5783, test_loss 2.3013, test_accuracy 0.4011, test_5_accuracy 0.6944 
+
+2021-08-05:23:50:46,727 INFO     [learner.py:527] ====Start train round 371
+2021-08-05:23:50:46,791 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:50:47,544 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:50:47,604 INFO     [learner.py:607] ====Pushing takes 0.05845928192138672 s
+2021-08-05:23:50:51,702 INFO     [learner.py:527] ====Start train round 372
+2021-08-05:23:50:51,799 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:50:52,458 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:50:52,531 INFO     [learner.py:607] ====Pushing takes 0.07039546966552734 s
+2021-08-05:23:50:56,467 INFO     [learner.py:527] ====Start train round 373
+2021-08-05:23:50:56,554 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:50:57,173 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:50:57,206 INFO     [learner.py:607] ====Pushing takes 0.030528545379638672 s
+2021-08-05:23:50:59,762 INFO     [learner.py:527] ====Start train round 374
+2021-08-05:23:50:59,858 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:51:00,556 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:51:00,654 INFO     [learner.py:607] ====Pushing takes 0.09602046012878418 s
+2021-08-05:23:51:02,965 INFO     [learner.py:527] ====Start train round 375
+2021-08-05:23:51:03,50 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:51:03,729 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:51:03,816 INFO     [learner.py:607] ====Pushing takes 0.08429455757141113 s
+2021-08-05:23:51:06,199 INFO     [learner.py:527] ====Start train round 376
+2021-08-05:23:51:06,293 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:51:07,1 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:51:07,64 INFO     [learner.py:607] ====Pushing takes 0.06068706512451172 s
+2021-08-05:23:51:10,466 INFO     [learner.py:527] ====Start train round 377
+2021-08-05:23:51:10,556 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:51:11,285 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:51:11,325 INFO     [learner.py:607] ====Pushing takes 0.038062334060668945 s
+2021-08-05:23:51:13,898 INFO     [learner.py:527] ====Start train round 378
+2021-08-05:23:51:14,0 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:51:14,691 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:51:14,747 INFO     [learner.py:607] ====Pushing takes 0.05419278144836426 s
+2021-08-05:23:51:17,301 INFO     [learner.py:527] ====Start train round 379
+2021-08-05:23:51:17,447 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:51:18,126 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:51:18,169 INFO     [learner.py:607] ====Pushing takes 0.03992772102355957 s
+2021-08-05:23:51:20,642 INFO     [learner.py:527] ====Start train round 380
+2021-08-05:23:51:20,830 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:51:22,0 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:51:22,433 INFO     [learner.py:607] ====Pushing takes 0.4298417568206787 s
+2021-08-05:23:52:34,874 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2929, Top-1 Accuracy: 11025.0/27379 (0.4027), Top-5 Accuracy: 0.6958
+2021-08-05:23:52:34,887 INFO     [learner.py:657] After aggregation epoch 380, CumulTime 5194.1409, eval_time 69.0718, test_loss 2.2929, test_accuracy 0.4027, test_5_accuracy 0.6958 
+
+2021-08-05:23:52:35,186 INFO     [learner.py:527] ====Start train round 381
+2021-08-05:23:52:35,279 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:52:36,30 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:52:36,87 INFO     [learner.py:607] ====Pushing takes 0.05428600311279297 s
+2021-08-05:23:52:39,792 INFO     [learner.py:527] ====Start train round 382
+2021-08-05:23:52:39,859 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:52:40,481 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:52:40,528 INFO     [learner.py:607] ====Pushing takes 0.04479026794433594 s
+2021-08-05:23:52:43,153 INFO     [learner.py:527] ====Start train round 383
+2021-08-05:23:52:43,218 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:52:43,934 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:52:44,8 INFO     [learner.py:607] ====Pushing takes 0.07090449333190918 s
+2021-08-05:23:52:48,539 INFO     [learner.py:527] ====Start train round 384
+2021-08-05:23:52:48,609 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:52:49,431 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:52:49,469 INFO     [learner.py:607] ====Pushing takes 0.03580474853515625 s
+2021-08-05:23:52:51,927 INFO     [learner.py:527] ====Start train round 385
+2021-08-05:23:52:51,995 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:52:52,726 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:52:52,779 INFO     [learner.py:607] ====Pushing takes 0.05061936378479004 s
+2021-08-05:23:52:55,141 INFO     [learner.py:527] ====Start train round 386
+2021-08-05:23:52:55,228 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:52:55,852 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:52:55,900 INFO     [learner.py:607] ====Pushing takes 0.04469013214111328 s
+2021-08-05:23:52:58,661 INFO     [learner.py:527] ====Start train round 387
+2021-08-05:23:52:58,763 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:52:59,389 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:52:59,430 INFO     [learner.py:607] ====Pushing takes 0.0393068790435791 s
+2021-08-05:23:53:02,507 INFO     [learner.py:527] ====Start train round 388
+2021-08-05:23:53:02,613 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:53:03,345 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:53:03,410 INFO     [learner.py:607] ====Pushing takes 0.06268954277038574 s
+2021-08-05:23:53:05,702 INFO     [learner.py:527] ====Start train round 389
+2021-08-05:23:53:05,812 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:53:06,533 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:53:06,571 INFO     [learner.py:607] ====Pushing takes 0.03539562225341797 s
+2021-08-05:23:53:08,967 INFO     [learner.py:527] ====Start train round 390
+2021-08-05:23:53:09,92 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:53:09,844 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:53:09,889 INFO     [learner.py:607] ====Pushing takes 0.042586326599121094 s
+2021-08-05:23:54:21,159 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2965, Top-1 Accuracy: 11034.0/27379 (0.403), Top-5 Accuracy: 0.697
+2021-08-05:23:54:21,170 INFO     [learner.py:657] After aggregation epoch 390, CumulTime 5300.4238, eval_time 68.8683, test_loss 2.2965, test_accuracy 0.403, test_5_accuracy 0.697 
+
+2021-08-05:23:54:21,471 INFO     [learner.py:527] ====Start train round 391
+2021-08-05:23:54:21,566 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:22,396 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:22,450 INFO     [learner.py:607] ====Pushing takes 0.05154609680175781 s
+2021-08-05:23:54:26,528 INFO     [learner.py:527] ====Start train round 392
+2021-08-05:23:54:26,619 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:27,372 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:27,460 INFO     [learner.py:607] ====Pushing takes 0.0854954719543457 s
+2021-08-05:23:54:29,751 INFO     [learner.py:527] ====Start train round 393
+2021-08-05:23:54:29,858 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:30,482 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:30,550 INFO     [learner.py:607] ====Pushing takes 0.06459999084472656 s
+2021-08-05:23:54:33,120 INFO     [learner.py:527] ====Start train round 394
+2021-08-05:23:54:33,225 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:33,982 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:34,66 INFO     [learner.py:607] ====Pushing takes 0.08216571807861328 s
+2021-08-05:23:54:35,384 INFO     [learner.py:527] ====Start train round 395
+2021-08-05:23:54:35,544 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:36,408 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:36,488 INFO     [learner.py:607] ====Pushing takes 0.07800698280334473 s
+2021-08-05:23:54:40,534 INFO     [learner.py:527] ====Start train round 396
+2021-08-05:23:54:40,662 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:41,582 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:41,659 INFO     [learner.py:607] ====Pushing takes 0.07581496238708496 s
+2021-08-05:23:54:43,85 INFO     [learner.py:527] ====Start train round 397
+2021-08-05:23:54:43,183 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:44,50 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:44,96 INFO     [learner.py:607] ====Pushing takes 0.04398488998413086 s
+2021-08-05:23:54:45,412 INFO     [learner.py:527] ====Start train round 398
+2021-08-05:23:54:45,521 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:46,306 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:46,371 INFO     [learner.py:607] ====Pushing takes 0.061142921447753906 s
+2021-08-05:23:54:47,636 INFO     [learner.py:527] ====Start train round 399
+2021-08-05:23:54:47,728 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:48,453 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:48,513 INFO     [learner.py:607] ====Pushing takes 0.05779767036437988 s
+2021-08-05:23:54:50,70 INFO     [learner.py:527] ====Start train round 400
+2021-08-05:23:54:50,180 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:54:50,908 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:54:50,971 INFO     [learner.py:607] ====Pushing takes 0.06061363220214844 s
+2021-08-05:23:56:03,679 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.3061, Top-1 Accuracy: 11063.0/27379 (0.4041), Top-5 Accuracy: 0.6922
+2021-08-05:23:56:03,685 INFO     [learner.py:657] After aggregation epoch 400, CumulTime 5402.9386, eval_time 69.2051, test_loss 2.3061, test_accuracy 0.4041, test_5_accuracy 0.6922 
+
+2021-08-05:23:56:04,81 INFO     [learner.py:527] ====Start train round 401
+2021-08-05:23:56:04,183 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:04,986 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:05,96 INFO     [learner.py:607] ====Pushing takes 0.10622835159301758 s
+2021-08-05:23:56:06,537 INFO     [learner.py:527] ====Start train round 402
+2021-08-05:23:56:06,643 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:07,540 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:07,598 INFO     [learner.py:607] ====Pushing takes 0.05493497848510742 s
+2021-08-05:23:56:08,992 INFO     [learner.py:527] ====Start train round 403
+2021-08-05:23:56:09,95 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:09,817 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:09,888 INFO     [learner.py:607] ====Pushing takes 0.06761670112609863 s
+2021-08-05:23:56:11,416 INFO     [learner.py:527] ====Start train round 404
+2021-08-05:23:56:11,520 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:12,300 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:12,383 INFO     [learner.py:607] ====Pushing takes 0.08191847801208496 s
+2021-08-05:23:56:13,660 INFO     [learner.py:527] ====Start train round 405
+2021-08-05:23:56:13,768 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:14,440 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:14,512 INFO     [learner.py:607] ====Pushing takes 0.06951665878295898 s
+2021-08-05:23:56:18,567 INFO     [learner.py:527] ====Start train round 406
+2021-08-05:23:56:18,660 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:19,486 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:19,558 INFO     [learner.py:607] ====Pushing takes 0.06951379776000977 s
+2021-08-05:23:56:20,989 INFO     [learner.py:527] ====Start train round 407
+2021-08-05:23:56:21,111 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:22,275 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:22,346 INFO     [learner.py:607] ====Pushing takes 0.0686502456665039 s
+2021-08-05:23:56:23,872 INFO     [learner.py:527] ====Start train round 408
+2021-08-05:23:56:23,959 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:24,832 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:24,864 INFO     [learner.py:607] ====Pushing takes 0.029977083206176758 s
+2021-08-05:23:56:26,572 INFO     [learner.py:527] ====Start train round 409
+2021-08-05:23:56:26,668 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:27,508 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:27,568 INFO     [learner.py:607] ====Pushing takes 0.05762910842895508 s
+2021-08-05:23:56:32,572 INFO     [learner.py:527] ====Start train round 410
+2021-08-05:23:56:32,692 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:56:33,425 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:56:33,496 INFO     [learner.py:607] ====Pushing takes 0.06773138046264648 s
+2021-08-05:23:57:44,784 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2489, Top-1 Accuracy: 11334.0/27379 (0.414), Top-5 Accuracy: 0.7026
+2021-08-05:23:57:44,788 INFO     [learner.py:657] After aggregation epoch 410, CumulTime 5504.0416, eval_time 69.7494, test_loss 2.2489, test_accuracy 0.414, test_5_accuracy 0.7026 
+
+2021-08-05:23:57:45,181 INFO     [learner.py:527] ====Start train round 411
+2021-08-05:23:57:45,247 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:57:46,22 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:57:46,95 INFO     [learner.py:607] ====Pushing takes 0.06993722915649414 s
+2021-08-05:23:57:47,326 INFO     [learner.py:527] ====Start train round 412
+2021-08-05:23:57:47,395 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:57:48,169 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:57:48,219 INFO     [learner.py:607] ====Pushing takes 0.04743146896362305 s
+2021-08-05:23:57:49,776 INFO     [learner.py:527] ====Start train round 413
+2021-08-05:23:57:49,840 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:57:50,631 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:57:50,732 INFO     [learner.py:607] ====Pushing takes 0.09750247001647949 s
+2021-08-05:23:57:52,62 INFO     [learner.py:527] ====Start train round 414
+2021-08-05:23:57:52,158 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:57:52,899 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:57:52,943 INFO     [learner.py:607] ====Pushing takes 0.04158973693847656 s
+2021-08-05:23:57:56,615 INFO     [learner.py:527] ====Start train round 415
+2021-08-05:23:57:56,710 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:57:57,509 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:57:57,552 INFO     [learner.py:607] ====Pushing takes 0.03969597816467285 s
+2021-08-05:23:57:59,448 INFO     [learner.py:527] ====Start train round 416
+2021-08-05:23:57:59,556 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:58:00,348 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:58:00,388 INFO     [learner.py:607] ====Pushing takes 0.03495311737060547 s
+2021-08-05:23:58:01,967 INFO     [learner.py:527] ====Start train round 417
+2021-08-05:23:58:02,66 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:58:02,860 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:58:02,895 INFO     [learner.py:607] ====Pushing takes 0.03233456611633301 s
+2021-08-05:23:58:04,542 INFO     [learner.py:527] ====Start train round 418
+2021-08-05:23:58:04,649 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:58:05,395 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:58:05,431 INFO     [learner.py:607] ====Pushing takes 0.03302145004272461 s
+2021-08-05:23:58:07,164 INFO     [learner.py:527] ====Start train round 419
+2021-08-05:23:58:07,260 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:58:08,23 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:58:08,596 INFO     [learner.py:607] ====Pushing takes 0.5713546276092529 s
+2021-08-05:23:58:10,620 INFO     [learner.py:527] ====Start train round 420
+2021-08-05:23:58:10,720 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:58:11,466 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:58:11,504 INFO     [learner.py:607] ====Pushing takes 0.03591108322143555 s
+2021-08-05:23:59:23,191 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2581, Top-1 Accuracy: 11255.0/27379 (0.4111), Top-5 Accuracy: 0.7025
+2021-08-05:23:59:23,195 INFO     [learner.py:657] After aggregation epoch 420, CumulTime 5602.449, eval_time 70.1135, test_loss 2.2581, test_accuracy 0.4111, test_5_accuracy 0.7025 
+
+2021-08-05:23:59:23,514 INFO     [learner.py:527] ====Start train round 421
+2021-08-05:23:59:23,616 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:24,271 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:24,329 INFO     [learner.py:607] ====Pushing takes 0.05564141273498535 s
+2021-08-05:23:59:24,825 INFO     [learner.py:527] ====Start train round 422
+2021-08-05:23:59:24,913 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:25,685 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:25,750 INFO     [learner.py:607] ====Pushing takes 0.061922311782836914 s
+2021-08-05:23:59:27,104 INFO     [learner.py:527] ====Start train round 423
+2021-08-05:23:59:27,173 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:27,942 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:28,20 INFO     [learner.py:607] ====Pushing takes 0.07541418075561523 s
+2021-08-05:23:59:29,763 INFO     [learner.py:527] ====Start train round 424
+2021-08-05:23:59:29,835 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:30,593 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:30,663 INFO     [learner.py:607] ====Pushing takes 0.06768608093261719 s
+2021-08-05:23:59:34,648 INFO     [learner.py:527] ====Start train round 425
+2021-08-05:23:59:34,757 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:35,792 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:35,829 INFO     [learner.py:607] ====Pushing takes 0.03473949432373047 s
+2021-08-05:23:59:37,349 INFO     [learner.py:527] ====Start train round 426
+2021-08-05:23:59:37,465 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:38,257 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:38,330 INFO     [learner.py:607] ====Pushing takes 0.07065773010253906 s
+2021-08-05:23:59:40,72 INFO     [learner.py:527] ====Start train round 427
+2021-08-05:23:59:40,193 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:41,97 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:41,170 INFO     [learner.py:607] ====Pushing takes 0.07101750373840332 s
+2021-08-05:23:59:42,686 INFO     [learner.py:527] ====Start train round 428
+2021-08-05:23:59:42,783 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:43,497 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:43,550 INFO     [learner.py:607] ====Pushing takes 0.050164222717285156 s
+2021-08-05:23:59:48,665 INFO     [learner.py:527] ====Start train round 429
+2021-08-05:23:59:48,778 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:49,611 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:49,680 INFO     [learner.py:607] ====Pushing takes 0.06451272964477539 s
+2021-08-05:23:59:51,47 INFO     [learner.py:527] ====Start train round 430
+2021-08-05:23:59:51,143 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-05:23:59:51,838 INFO     [learner.py:440] Completed to run client 14
+2021-08-05:23:59:51,883 INFO     [learner.py:607] ====Pushing takes 0.04289126396179199 s
+2021-08-06:00:01:01,597 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2785, Top-1 Accuracy: 11117.0/27379 (0.406), Top-5 Accuracy: 0.6994
+2021-08-06:00:01:01,602 INFO     [learner.py:657] After aggregation epoch 430, CumulTime 5700.856, eval_time 68.0873, test_loss 2.2785, test_accuracy 0.406, test_5_accuracy 0.6994 
+
+2021-08-06:00:01:01,915 INFO     [learner.py:527] ====Start train round 431
+2021-08-06:00:01:02,24 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:02,781 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:02,850 INFO     [learner.py:607] ====Pushing takes 0.06683063507080078 s
+2021-08-06:00:01:04,606 INFO     [learner.py:527] ====Start train round 432
+2021-08-06:00:01:04,703 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:05,380 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:05,456 INFO     [learner.py:607] ====Pushing takes 0.07378506660461426 s
+2021-08-06:00:01:06,759 INFO     [learner.py:527] ====Start train round 433
+2021-08-06:00:01:06,867 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:07,739 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:07,788 INFO     [learner.py:607] ====Pushing takes 0.04680514335632324 s
+2021-08-06:00:01:12,721 INFO     [learner.py:527] ====Start train round 434
+2021-08-06:00:01:12,786 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:13,673 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:13,751 INFO     [learner.py:607] ====Pushing takes 0.07628917694091797 s
+2021-08-06:00:01:15,62 INFO     [learner.py:527] ====Start train round 435
+2021-08-06:00:01:15,126 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:15,844 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:15,892 INFO     [learner.py:607] ====Pushing takes 0.04622364044189453 s
+2021-08-06:00:01:17,539 INFO     [learner.py:527] ====Start train round 436
+2021-08-06:00:01:17,602 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:18,408 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:18,445 INFO     [learner.py:607] ====Pushing takes 0.035173654556274414 s
+2021-08-06:00:01:19,883 INFO     [learner.py:527] ====Start train round 437
+2021-08-06:00:01:19,948 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:20,657 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:20,803 INFO     [learner.py:607] ====Pushing takes 0.14159035682678223 s
+2021-08-06:00:01:22,72 INFO     [learner.py:527] ====Start train round 438
+2021-08-06:00:01:22,173 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:22,874 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:22,921 INFO     [learner.py:607] ====Pushing takes 0.04470348358154297 s
+2021-08-06:00:01:26,686 INFO     [learner.py:527] ====Start train round 439
+2021-08-06:00:01:26,784 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:27,638 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:27,699 INFO     [learner.py:607] ====Pushing takes 0.05832076072692871 s
+2021-08-06:00:01:29,100 INFO     [learner.py:527] ====Start train round 440
+2021-08-06:00:01:29,188 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:01:30,699 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:01:30,766 INFO     [learner.py:607] ====Pushing takes 0.06480884552001953 s
+2021-08-06:00:02:41,421 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2746, Top-1 Accuracy: 11088.0/27379 (0.405), Top-5 Accuracy: 0.701
+2021-08-06:00:02:41,432 INFO     [learner.py:657] After aggregation epoch 440, CumulTime 5800.6855, eval_time 68.9074, test_loss 2.2746, test_accuracy 0.405, test_5_accuracy 0.701 
+
+2021-08-06:00:02:41,720 INFO     [learner.py:527] ====Start train round 441
+2021-08-06:00:02:41,824 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:02:42,626 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:02:42,688 INFO     [learner.py:607] ====Pushing takes 0.05962538719177246 s
+2021-08-06:00:02:44,415 INFO     [learner.py:527] ====Start train round 442
+2021-08-06:00:02:44,515 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:02:45,242 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:02:45,304 INFO     [learner.py:607] ====Pushing takes 0.05927014350891113 s
+2021-08-06:00:02:46,667 INFO     [learner.py:527] ====Start train round 443
+2021-08-06:00:02:46,780 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:02:47,604 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:02:47,669 INFO     [learner.py:607] ====Pushing takes 0.06302976608276367 s
+2021-08-06:00:02:50,729 INFO     [learner.py:527] ====Start train round 444
+2021-08-06:00:02:50,826 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:02:51,633 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:02:51,694 INFO     [learner.py:607] ====Pushing takes 0.05878901481628418 s
+2021-08-06:00:02:53,31 INFO     [learner.py:527] ====Start train round 445
+2021-08-06:00:02:53,96 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:02:54,41 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:02:54,104 INFO     [learner.py:607] ====Pushing takes 0.0596163272857666 s
+2021-08-06:00:02:55,330 INFO     [learner.py:527] ====Start train round 446
+2021-08-06:00:02:55,397 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:02:56,121 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:02:56,203 INFO     [learner.py:607] ====Pushing takes 0.07914066314697266 s
+2021-08-06:00:02:57,699 INFO     [learner.py:527] ====Start train round 447
+2021-08-06:00:02:57,771 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:02:58,456 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:02:58,498 INFO     [learner.py:607] ====Pushing takes 0.03899526596069336 s
+2021-08-06:00:03:00,45 INFO     [learner.py:527] ====Start train round 448
+2021-08-06:00:03:00,111 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:03:00,826 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:03:00,925 INFO     [learner.py:607] ====Pushing takes 0.0974888801574707 s
+2021-08-06:00:03:04,764 INFO     [learner.py:527] ====Start train round 449
+2021-08-06:00:03:04,824 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:03:05,559 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:03:05,621 INFO     [learner.py:607] ====Pushing takes 0.05957746505737305 s
+2021-08-06:00:03:07,150 INFO     [learner.py:527] ====Start train round 450
+2021-08-06:00:03:07,214 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:03:07,949 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:03:08,48 INFO     [learner.py:607] ====Pushing takes 0.09698057174682617 s
+2021-08-06:00:04:18,962 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2774, Top-1 Accuracy: 11130.0/27379 (0.4065), Top-5 Accuracy: 0.7008
+2021-08-06:00:04:18,966 INFO     [learner.py:657] After aggregation epoch 450, CumulTime 5898.22, eval_time 69.4328, test_loss 2.2774, test_accuracy 0.4065, test_5_accuracy 0.7008 
+
+2021-08-06:00:04:19,250 INFO     [learner.py:527] ====Start train round 451
+2021-08-06:00:04:19,336 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:20,224 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:20,300 INFO     [learner.py:607] ====Pushing takes 0.07201409339904785 s
+2021-08-06:00:04:22,70 INFO     [learner.py:527] ====Start train round 452
+2021-08-06:00:04:22,186 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:23,15 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:23,78 INFO     [learner.py:607] ====Pushing takes 0.06000041961669922 s
+2021-08-06:00:04:24,249 INFO     [learner.py:527] ====Start train round 453
+2021-08-06:00:04:24,370 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:25,63 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:25,100 INFO     [learner.py:607] ====Pushing takes 0.03419375419616699 s
+2021-08-06:00:04:28,758 INFO     [learner.py:527] ====Start train round 454
+2021-08-06:00:04:28,923 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:29,997 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:30,62 INFO     [learner.py:607] ====Pushing takes 0.06302165985107422 s
+2021-08-06:00:04:31,850 INFO     [learner.py:527] ====Start train round 455
+2021-08-06:00:04:31,989 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:32,932 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:32,991 INFO     [learner.py:607] ====Pushing takes 0.056290388107299805 s
+2021-08-06:00:04:34,567 INFO     [learner.py:527] ====Start train round 456
+2021-08-06:00:04:34,661 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:35,598 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:35,639 INFO     [learner.py:607] ====Pushing takes 0.03714132308959961 s
+2021-08-06:00:04:36,893 INFO     [learner.py:527] ====Start train round 457
+2021-08-06:00:04:36,986 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:37,848 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:37,941 INFO     [learner.py:607] ====Pushing takes 0.08722472190856934 s
+2021-08-06:00:04:42,763 INFO     [learner.py:527] ====Start train round 458
+2021-08-06:00:04:42,853 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:43,546 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:43,613 INFO     [learner.py:607] ====Pushing takes 0.06237506866455078 s
+2021-08-06:00:04:44,951 INFO     [learner.py:527] ====Start train round 459
+2021-08-06:00:04:45,45 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:45,909 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:45,943 INFO     [learner.py:607] ====Pushing takes 0.03146028518676758 s
+2021-08-06:00:04:47,57 INFO     [learner.py:527] ====Start train round 460
+2021-08-06:00:04:47,161 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:04:47,901 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:04:47,948 INFO     [learner.py:607] ====Pushing takes 0.04246020317077637 s
+2021-08-06:00:05:58,62 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2556, Top-1 Accuracy: 11214.0/27379 (0.4096), Top-5 Accuracy: 0.7043
+2021-08-06:00:05:58,76 INFO     [learner.py:657] After aggregation epoch 460, CumulTime 5997.3293, eval_time 68.6144, test_loss 2.2556, test_accuracy 0.4096, test_5_accuracy 0.7043 
+
+2021-08-06:00:05:58,362 INFO     [learner.py:527] ====Start train round 461
+2021-08-06:00:05:58,456 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:05:59,433 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:05:59,509 INFO     [learner.py:607] ====Pushing takes 0.07118034362792969 s
+2021-08-06:00:06:03,491 INFO     [learner.py:527] ====Start train round 462
+2021-08-06:00:06:03,590 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:04,815 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:05,617 INFO     [learner.py:607] ====Pushing takes 0.7796914577484131 s
+2021-08-06:00:06:09,821 INFO     [learner.py:527] ====Start train round 463
+2021-08-06:00:06:09,918 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:10,551 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:10,586 INFO     [learner.py:607] ====Pushing takes 0.03274655342102051 s
+2021-08-06:00:06:12,487 INFO     [learner.py:527] ====Start train round 464
+2021-08-06:00:06:12,603 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:13,260 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:13,357 INFO     [learner.py:607] ====Pushing takes 0.09534096717834473 s
+2021-08-06:00:06:16,441 INFO     [learner.py:527] ====Start train round 465
+2021-08-06:00:06:16,532 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:17,155 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:17,200 INFO     [learner.py:607] ====Pushing takes 0.042962074279785156 s
+2021-08-06:00:06:20,811 INFO     [learner.py:527] ====Start train round 466
+2021-08-06:00:06:20,906 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:21,593 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:21,688 INFO     [learner.py:607] ====Pushing takes 0.09287261962890625 s
+2021-08-06:00:06:25,376 INFO     [learner.py:527] ====Start train round 467
+2021-08-06:00:06:25,488 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:26,216 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:26,262 INFO     [learner.py:607] ====Pushing takes 0.044153451919555664 s
+2021-08-06:00:06:34,839 INFO     [learner.py:527] ====Start train round 468
+2021-08-06:00:06:34,976 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:35,611 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:35,669 INFO     [learner.py:607] ====Pushing takes 0.05332350730895996 s
+2021-08-06:00:06:40,72 INFO     [learner.py:527] ====Start train round 469
+2021-08-06:00:06:40,186 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:40,850 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:40,900 INFO     [learner.py:607] ====Pushing takes 0.04913187026977539 s
+2021-08-06:00:06:48,842 INFO     [learner.py:527] ====Start train round 470
+2021-08-06:00:06:48,949 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:06:49,698 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:06:49,740 INFO     [learner.py:607] ====Pushing takes 0.03986191749572754 s
+2021-08-06:00:08:11,699 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2587, Top-1 Accuracy: 11265.0/27379 (0.4114), Top-5 Accuracy: 0.7008
+2021-08-06:00:08:11,729 INFO     [learner.py:657] After aggregation epoch 470, CumulTime 6130.9826, eval_time 76.7209, test_loss 2.2587, test_accuracy 0.4114, test_5_accuracy 0.7008 
+
+2021-08-06:00:08:12,37 INFO     [learner.py:527] ====Start train round 471
+2021-08-06:00:08:12,129 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:08:12,855 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:08:12,915 INFO     [learner.py:607] ====Pushing takes 0.05808258056640625 s
+2021-08-06:00:08:17,358 INFO     [learner.py:527] ====Start train round 472
+2021-08-06:00:08:17,499 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:08:18,212 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:08:18,260 INFO     [learner.py:607] ====Pushing takes 0.04584980010986328 s
+2021-08-06:00:08:23,90 INFO     [learner.py:527] ====Start train round 473
+2021-08-06:00:08:23,185 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:08:23,810 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:08:23,848 INFO     [learner.py:607] ====Pushing takes 0.03598499298095703 s
+2021-08-06:00:08:28,970 INFO     [learner.py:527] ====Start train round 474
+2021-08-06:00:08:29,67 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:08:29,703 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:08:29,739 INFO     [learner.py:607] ====Pushing takes 0.03402519226074219 s
+2021-08-06:00:08:35,183 INFO     [learner.py:527] ====Start train round 475
+2021-08-06:00:08:35,286 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:08:35,951 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:08:36,30 INFO     [learner.py:607] ====Pushing takes 0.07617831230163574 s
+2021-08-06:00:08:41,27 INFO     [learner.py:527] ====Start train round 476
+2021-08-06:00:08:41,126 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:08:41,867 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:08:41,985 INFO     [learner.py:607] ====Pushing takes 0.1156320571899414 s
+2021-08-06:00:08:46,831 INFO     [learner.py:527] ====Start train round 477
+2021-08-06:00:08:46,926 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:08:47,549 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:08:47,609 INFO     [learner.py:607] ====Pushing takes 0.054926156997680664 s
+2021-08-06:00:08:54,882 INFO     [learner.py:527] ====Start train round 478
+2021-08-06:00:08:54,995 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:08:55,639 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:08:55,732 INFO     [learner.py:607] ====Pushing takes 0.09087634086608887 s
+2021-08-06:00:09:01,158 INFO     [learner.py:527] ====Start train round 479
+2021-08-06:00:09:01,270 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:09:01,932 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:09:01,999 INFO     [learner.py:607] ====Pushing takes 0.062264442443847656 s
+2021-08-06:00:09:08,909 INFO     [learner.py:527] ====Start train round 480
+2021-08-06:00:09:09,17 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:09:09,760 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:09:09,809 INFO     [learner.py:607] ====Pushing takes 0.04649710655212402 s
+2021-08-06:00:10:27,38 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2674, Top-1 Accuracy: 11192.0/27379 (0.4088), Top-5 Accuracy: 0.7002
+2021-08-06:00:10:27,52 INFO     [learner.py:657] After aggregation epoch 480, CumulTime 6266.3055, eval_time 72.339, test_loss 2.2674, test_accuracy 0.4088, test_5_accuracy 0.7002 
+
+2021-08-06:00:10:27,345 INFO     [learner.py:527] ====Start train round 481
+2021-08-06:00:10:27,435 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:10:28,299 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:10:28,366 INFO     [learner.py:607] ====Pushing takes 0.06443619728088379 s
+2021-08-06:00:10:33,787 INFO     [learner.py:527] ====Start train round 482
+2021-08-06:00:10:33,932 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:10:34,584 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:10:34,664 INFO     [learner.py:607] ====Pushing takes 0.07570981979370117 s
+2021-08-06:00:10:39,71 INFO     [learner.py:527] ====Start train round 483
+2021-08-06:00:10:39,162 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:10:39,925 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:10:39,980 INFO     [learner.py:607] ====Pushing takes 0.052809953689575195 s
+2021-08-06:00:10:46,934 INFO     [learner.py:527] ====Start train round 484
+2021-08-06:00:10:47,43 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:10:47,785 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:10:47,868 INFO     [learner.py:607] ====Pushing takes 0.07084226608276367 s
+2021-08-06:00:10:52,661 INFO     [learner.py:527] ====Start train round 485
+2021-08-06:00:10:52,762 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:10:53,426 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:10:53,490 INFO     [learner.py:607] ====Pushing takes 0.06151437759399414 s
+2021-08-06:00:11:00,928 INFO     [learner.py:527] ====Start train round 486
+2021-08-06:00:11:01,18 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:11:01,643 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:11:01,701 INFO     [learner.py:607] ====Pushing takes 0.056380510330200195 s
+2021-08-06:00:11:06,347 INFO     [learner.py:527] ====Start train round 487
+2021-08-06:00:11:06,460 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:11:07,129 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:11:07,182 INFO     [learner.py:607] ====Pushing takes 0.0499117374420166 s
+2021-08-06:00:11:14,962 INFO     [learner.py:527] ====Start train round 488
+2021-08-06:00:11:15,60 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:11:15,794 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:11:15,868 INFO     [learner.py:607] ====Pushing takes 0.07267308235168457 s
+2021-08-06:00:11:20,621 INFO     [learner.py:527] ====Start train round 489
+2021-08-06:00:11:20,722 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:11:21,348 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:11:21,425 INFO     [learner.py:607] ====Pushing takes 0.07462787628173828 s
+2021-08-06:00:11:28,942 INFO     [learner.py:527] ====Start train round 490
+2021-08-06:00:11:29,47 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:11:29,841 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:11:29,900 INFO     [learner.py:607] ====Pushing takes 0.0507962703704834 s
+2021-08-06:00:12:48,430 INFO     [utils_model.py:294] Rank 4: Test set: Average loss: 2.2644, Top-1 Accuracy: 11213.0/27379 (0.4095), Top-5 Accuracy: 0.701
+2021-08-06:00:12:48,434 INFO     [learner.py:657] After aggregation epoch 490, CumulTime 6407.6878, eval_time 73.7352, test_loss 2.2644, test_accuracy 0.4095, test_5_accuracy 0.701 
+
+2021-08-06:00:12:48,749 INFO     [learner.py:527] ====Start train round 491
+2021-08-06:00:12:48,851 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:12:49,482 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:12:49,535 INFO     [learner.py:607] ====Pushing takes 0.0505983829498291 s
+2021-08-06:00:12:54,187 INFO     [learner.py:527] ====Start train round 492
+2021-08-06:00:12:54,279 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:12:54,983 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:12:55,98 INFO     [learner.py:607] ====Pushing takes 0.10971450805664062 s
+2021-08-06:00:13:00,510 INFO     [learner.py:527] ====Start train round 493
+2021-08-06:00:13:00,634 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:13:01,389 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:13:01,427 INFO     [learner.py:607] ====Pushing takes 0.03559708595275879 s
+2021-08-06:00:13:06,986 INFO     [learner.py:527] ====Start train round 494
+2021-08-06:00:13:07,75 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:13:07,852 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:13:07,895 INFO     [learner.py:607] ====Pushing takes 0.040679216384887695 s
+2021-08-06:00:13:13,294 INFO     [learner.py:527] ====Start train round 495
+2021-08-06:00:13:13,397 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:13:14,46 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:13:14,141 INFO     [learner.py:607] ====Pushing takes 0.09184432029724121 s
+2021-08-06:00:13:20,984 INFO     [learner.py:527] ====Start train round 496
+2021-08-06:00:13:21,78 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:13:21,734 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:13:21,775 INFO     [learner.py:607] ====Pushing takes 0.03899049758911133 s
+2021-08-06:00:13:26,277 INFO     [learner.py:527] ====Start train round 497
+2021-08-06:00:13:26,368 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:13:26,999 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:13:27,82 INFO     [learner.py:607] ====Pushing takes 0.08086705207824707 s
+2021-08-06:00:13:35,15 INFO     [learner.py:527] ====Start train round 498
+2021-08-06:00:13:35,114 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:13:35,883 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:13:35,999 INFO     [learner.py:607] ====Pushing takes 0.11397051811218262 s
+2021-08-06:00:13:41,221 INFO     [learner.py:527] ====Start train round 499
+2021-08-06:00:13:41,318 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:13:41,986 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:13:42,76 INFO     [learner.py:607] ====Pushing takes 0.08874320983886719 s
+2021-08-06:00:13:49,24 INFO     [learner.py:527] ====Start train round 500
+2021-08-06:00:13:49,116 INFO     [learner.py:165] Start to run client 14 on rank 4...
+2021-08-06:00:13:49,754 INFO     [learner.py:440] Completed to run client 14
+2021-08-06:00:13:49,778 INFO     [learner.py:674] ====Error: [Errno 32] Broken pipe, <class 'BrokenPipeError'>, learner.py, 603

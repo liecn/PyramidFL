@@ -1,0 +1,63 @@
+# Configuration file of Oort training experiment
+
+# ========== Cluster configuration ========== 
+# ip address of the parameter server (need 1 GPU)
+ps_ip: dev-amd20-v100
+
+# ip address of each worker:# of gpus on this worker
+# Note that if we collocate ps and worker, then we need to decrease this number of gpus by 1
+# E.g., master node has 4 GPUs, then 1 for the ps, and worker should be set to: worker:3
+worker_ips: 
+    - dev-amd20-v100:[0,1,1,1] # worker_ip: # of gpus
+    # - dev-amd20-v100:[0,0,1,0,1,1,1,1] # worker_ip: # of gpus
+    # - dev-amd20-v100:[0,0,0,5] # worker_ip: # of gpus
+
+exp_path: /mnt/home/lichenni/projects/mobicom22_fl/training
+python_path: /mnt/home/lichenni/anaconda3/envs/oort/bin/
+auth:
+    ssh_user: "lichenni"
+    ssh_private_key: ~/.ssh/id_rsa
+
+# cmd to run before we can indeed run oort (in order)
+setup_commands:
+    # - source $HOME/anaconda3/bin/activate oort    
+    # - export NCCL_SOCKET_IFNAME='enp94s0f0'         # Run "ifconfig" to ensure the right NIC for nccl if you have multiple NICs
+
+# ========== Additional job configuration ========== 
+# Default parameters are specified in argParser.py, wherein more description of the parameter can be found
+
+job_conf: 
+    - log_path: /mnt/home/lichenni/projects/mobicom22_fl/training/evals # Path of log files
+    - job_name: har                   # Generate logs under this folder: log_path/job_name/time_stamp
+    - total_worker: 20                    # Number of participants per round, we use K=100 in our paper, large K will be much slower
+    - data_set: har                     # Dataset: openImg, google_speech, stackoverflow,har
+    - data_dir: /mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/HARBox    # Path of the dataset
+    - data_mapfile: .              # Allocation of data to each client, turn to iid setting if not provided
+    - client_path: /mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/data/device_info/client_device_capacity 
+    - user_trace: /mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/data/device_info/client_behave_trace
+    - sample_mode: random                                  # Client selection: random, oort
+    - model: mobilenet_v2                            # Models: shufflenet_v2_x2_0, mobilenet_v2, resnet34, albert-base-v2
+    - gradient_policy: yogi                 
+    # - proxy_avg: True # Commenting out these two lines will turn to "FedAvg"
+    - round_penalty: 2                    # Penalty factor in our paper (\alpha), \alpha -> 0 turns to (Oort w/o sys)
+    - eval_interval: 1                     # How many rounds to run a testing on the testing set
+    - epochs: 1000                           # Number of rounds to run this training. We use 1000 in our paper, while it may converge w/ ~400 rounds
+    - filter_less: 30                       # Remove clients w/ less than 16 samples
+    - batch_size: 16
+    - upload_epoch: 5
+    - pacer_delta: 0.3
+    - exploration_min: 0.4
+    - task: har
+    - skip_partition: True
+    - num_loaders: 4
+    - learning_rate: 4e-5
+    - min_learning_rate: 2e-5
+    - enable_adapt_local_epoch: True
+    - enable_dropout: True
+    # - adaptive_epoch_beta: 0
+    - dropout_low: 0
+    - dropout_high: 0
+    # - noise_factor: 5
+    # - enforce_random: True
+    # - enable_obs_local_epoch: True
+

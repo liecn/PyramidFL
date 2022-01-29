@@ -1,0 +1,77 @@
+2021-12-22:21:31:06,598 INFO     [param_server.py:13] End up with cuda device tensor([0.9212], device='cuda:0')
+2021-12-22:21:31:07,53 INFO     [param_server.py:616] ====Start to initialize dataset
+2021-12-22:21:31:07,55 INFO     [flLibs.py:59] ====Initialize the model
+2021-12-22:21:31:11,373 INFO     [learner.py:13] End up with cuda device tensor([0.7064], device='cuda:1')
+2021-12-22:21:31:11,375 INFO     [learner.py:41] ===== Experiment start on : dev-amd20-v100=====
+2021-12-22:21:31:11,795 INFO     [learner.py:709] ====Start to initialize dataset
+2021-12-22:21:31:11,796 INFO     [flLibs.py:59] ====Initialize the model
+2021-12-22:21:32:59,708 INFO     [learner.py:732] ==== Starting training data partitioner =====
+2021-12-22:21:32:59,775 INFO     [divide_data.py:95] ====Initiating DataPartitioner takes 0.05757474899291992 s
+
+2021-12-22:21:32:59,776 INFO     [learner.py:735] ==== Finished training data partitioner =====
+2021-12-22:21:32:59,869 INFO     [learner.py:88] ====Save obs_client====
+2021-12-22:21:33:01,268 INFO     [param_server.py:98] ====Info of all feasible clients {'total_feasible_clients': 120, 'total_length': 30423}
+2021-12-22:21:33:01,288 INFO     [param_server.py:105] ====Save obs_client====
+2021-12-22:21:33:01,894 INFO     [param_server.py:197] ====PS: get in run()
+2021-12-22:21:33:01,894 INFO     [learner.py:748] ==== Starting testing data partitioner =====
+2021-12-22:21:33:01,898 INFO     [divide_data.py:95] ====Initiating DataPartitioner takes 0.0018367767333984375 s
+
+2021-12-22:21:33:01,899 INFO     [learner.py:750] ==== Finished testing data partitioner =====
+2021-12-22:21:33:01,902 INFO     [divide_data.py:388] ========= Start of Random Partition =========
+
+2021-12-22:21:33:01,910 INFO     [divide_data.py:509] Raw class per worker is : array([[592., 623., 583., 742., 561.]])
+
+2021-12-22:21:33:01,912 INFO     [divide_data.py:510] ========= End of Class/Worker =========
+
+2021-12-22:21:33:01,964 INFO     [learner.py:445] ====Worker: Start running
+2021-12-22:21:33:01,991 INFO     [learner.py:483] 
+Namespace(adam_epsilon=1e-08, adaptive_epoch_beta=1, backend='nccl', batch_size=16, bidirectional=True, blacklist_max_len=0.3, blacklist_rounds=-1, block_size=64, cache_dir=None, capacity_bin=True, clf_block_size=100, client_path='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/data/device_info/client_device_capacity', clip_bound=0.98, clock_factor=2.5, conf_path='~/dataset/', config_name=None, cut_off_util=0.7, data_dir='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/HARBox', data_mapfile='.', data_set='har', decay_epoch=5, decay_factor=0.95, display_step=20, do_eval=False, do_train=False, dropout_high=0.6, dropout_low=0.1, dump_epoch=1000, duplicate_data=1, enable_adapt_local_epoch=False, enable_dropout=False, enable_importance=False, enable_obs_client=True, enable_obs_importance=False, enable_obs_local_epoch=False, enforce_random=False, epochs=2, eval_all_checkpoints=False, eval_data_file='', eval_interval=2, eval_interval_prior=9999999, evaluate_during_training=False, exploration_alpha=0.3, exploration_decay=0.95, exploration_factor=0.9, exploration_min=0.4, filter_class=0, filter_less=30, filter_more=100000.0, finetune=False, fixed_clients=False, force_read=False, forward_pass=False, fp16=False, fp16_opt_level='O1', full_gradient_interval=20, gpu_device=1, gradient_accumulation_steps=1, gradient_policy='yogi', hetero_allocation='1.0-1.0-1.0-1.0-1.0-1.0', heterogeneity=1.0, hidden_layers=7, hidden_size=256, home_path='', input_dim=0, is_even_avg=True, job_name='har', labels_path='labels.json', learners='1', learning_rate=4e-05, line_by_line=False, load_epoch=1, load_model=False, load_time_stamp='0615_194942', local_rank=-1, log_path='/mnt/home/lichenni/projects/mobicom22_fl/training/evals', logging_steps=500, loss_decay=0.2, malicious_clients=0, manager_port=41262, max_grad_norm=1.0, max_iter_store=100, max_steps=-1, min_learning_rate=2e-05, mlm=True, mlm_probability=0.1, model='mobilenet_v2', model_avg=True, model_name_or_path=None, model_path=None, model_size=65536, model_type='', no_cuda=False, noise_dir=None, noise_factor=0, noise_max=0.5, noise_min=0.0, noise_prob=0.4, num_class=5, num_loaders=4, num_train_epochs=1.0, output_dim=0, output_dir=None, overcommit=1.3, overwrite_cache=False, overwrite_output_dir=False, pacer_delta=0.3, pacer_step=20, per_gpu_eval_batch_size=4, per_gpu_train_batch_size=4, proxy_avg=False, proxy_mu=0.1, ps_ip='dev-amd20-v100', ps_port='32950', read_models_path=False, release_cache=False, resampling_interval=1, rnn_type='lstm', round_penalty=2.0, round_threshold=10, run_all=False, sample_mode='random', sample_rate=16000, sample_seed=233, sample_window=5.0, sampler_path=None, save_path='./', save_steps=500, save_total_limit=None, score_mode='loss', seed=42, sequential='0', server_ip='', server_port='', should_continue=False, single_sim=0, skip_partition=False, sleep_up=0, spec_augment=False, speed_volume_perturb=False, stale_threshold=0, task='har', test_bsz=128, test_interval=20, test_manifest='data/test_manifest.csv', test_only=False, test_ratio=1.0, test_train_data=False, this_rank=1, threads=4, time_stamp='1222_213035_5322', timeout=9999999, to_device='cuda', tokenizer_name=None, total_worker=5, train_data_file='', train_manifest='data/train_manifest.csv', upload_epoch=5, user_trace='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/data/device_info/client_behave_trace', validate_interval=999999, vocab_tag_size=500, vocab_token_size=10000, warmup_steps=0, weight_decay=0.0, window='hamming', window_size=0.02, window_stride=0.01, yogi_beta=0.999, yogi_beta2=-1, yogi_eta=0.005, yogi_tau=0.001, zipf_alpha='5')
+
+2021-12-22:21:33:02,5 INFO     [learner.py:526] ====Start train round 1
+2021-12-22:21:33:02,9 INFO     [learner.py:164] Start to run client 1 on rank 1...
+====Worker: init_myprocesses
+Begin!
+2021-12-22:21:33:02,597 INFO     [learner.py:439] Completed to run client 1
+2021-12-22:21:33:02,605 INFO     [learner.py:606] ====Pushing takes 0.005677700042724609 s
+2021-12-22:21:33:02,619 INFO     [param_server.py:298] ====Start to merge models
+2021-12-22:21:33:02,624 INFO     [param_server.py:364] ====Done handling rank 1, with ratio 1.0, now collected 1 clients
+2021-12-22:21:33:02,625 INFO     [param_server.py:389] ====After aggregation in epoch: 0, virtual_clock: 0.0, top_1: : 0.0 % (0.0), top_5: : 0.0 % (0.0), test loss: 0.0, test len: 1.0
+2021-12-22:21:33:02,628 INFO     [param_server.py:418] Lock worker 1 with localStep 1 , while globalStep is 1
+
+2021-12-22:21:33:02,629 INFO     [param_server.py:449] ====Epoch 2 completes 1 clients with loss 79.11240858275501, sampled rewards are: 
+ {1: 0.010752726097037875} 
+==========
+2021-12-22:21:33:02,629 INFO     [param_server.py:458] ====Start to sample for epoch 2, global virtualClock: 0.0, round_duration: 0.0
+2021-12-22:21:33:02,631 INFO     [param_server.py:475] ====Try to resample clients, final takes: 
+ [55, 37, 59, 58, 76]
+2021-12-22:21:33:03,3 INFO     [learner.py:667] ====Dump model successfully
+2021-12-22:21:33:03,8 INFO     [learner.py:526] ====Start train round 2
+2021-12-22:21:33:03,10 INFO     [learner.py:164] Start to run client 55 on rank 1...
+2021-12-22:21:33:03,186 INFO     [param_server.py:568] Epoch is done: 2
+2021-12-22:21:33:03,513 INFO     [learner.py:439] Completed to run client 55
+2021-12-22:21:33:03,521 INFO     [learner.py:164] Start to run client 37 on rank 1...
+2021-12-22:21:33:03,878 INFO     [learner.py:439] Completed to run client 37
+2021-12-22:21:33:03,885 INFO     [learner.py:164] Start to run client 59 on rank 1...
+2021-12-22:21:33:04,469 INFO     [learner.py:439] Completed to run client 59
+2021-12-22:21:33:04,475 INFO     [learner.py:164] Start to run client 58 on rank 1...
+2021-12-22:21:33:04,866 INFO     [learner.py:439] Completed to run client 58
+2021-12-22:21:33:04,873 INFO     [learner.py:164] Start to run client 76 on rank 1...
+2021-12-22:21:33:05,201 INFO     [learner.py:439] Completed to run client 76
+2021-12-22:21:33:05,234 INFO     [learner.py:673] ====Error: [Errno 32] Broken pipe, <class 'BrokenPipeError'>, learner.py, 602
+Traceback (most recent call last):
+  File "/mnt/home/lichenni/projects/mobicom22_fl/training/learner.py", line 769, in <module>
+    run, args.backend, client_cfg)
+  File "/mnt/home/lichenni/projects/mobicom22_fl/training/learner.py", line 106, in init_myprocesses
+    fn(rank, model, q, param_q, stop_flag, client_cfg)
+  File "/mnt/home/lichenni/projects/mobicom22_fl/training/learner.py", line 679, in run
+    queue.put({rank: [None, None, None, True, -1, -1]})
+  File "<string>", line 2, in put
+  File "/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe

@@ -1,0 +1,173 @@
+/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/site-packages/librosa/util/decorators.py:9: NumbaDeprecationWarning: An import was requested from a module that has moved location.
+Import of 'jit' requested from: 'numba.decorators', please update to use 'numba.core.decorators' or pin to Numba version 0.48.0. This alias will not be present in Numba version 0.50.0.
+  from numba.decorators import jit as optional_jit
+2021-12-22:16:48:49,961 INFO     [param_server.py:13] End up with cuda device tensor([0.1237], device='cuda:0')
+2021-12-22:16:48:50,391 INFO     [param_server.py:607] ====Start to initialize dataset
+2021-12-22:16:48:50,393 INFO     [flLibs.py:59] ====Initialize the model
+/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/site-packages/librosa/util/decorators.py:9: NumbaDeprecationWarning: An import was requested from a module that has moved location.
+Import of 'jit' requested from: 'numba.decorators', please update to use 'numba.core.decorators' or pin to Numba version 0.48.0. This alias will not be present in Numba version 0.50.0.
+  from numba.decorators import jit as optional_jit
+2021-12-22:16:49:16,875 INFO     [learner.py:13] End up with cuda device tensor([0.7749], device='cuda:1')
+2021-12-22:16:49:16,880 INFO     [learner.py:41] ===== Experiment start on : dev-amd20-v100=====
+2021-12-22:16:49:17,296 INFO     [learner.py:709] ====Start to initialize dataset
+2021-12-22:16:49:17,297 INFO     [flLibs.py:59] ====Initialize the model
+2021-12-22:16:49:18,357 INFO     [learner.py:732] ==== Starting training data partitioner =====
+2021-12-22:16:49:18,371 INFO     [divide_data.py:95] ====Initiating DataPartitioner takes 0.01258707046508789 s
+
+2021-12-22:16:49:18,372 INFO     [learner.py:735] ==== Finished training data partitioner =====
+2021-12-22:16:49:18,401 INFO     [divide_data.py:388] ========= Start of Random Partition =========
+
+2021-12-22:16:49:18,406 INFO     [divide_data.py:401] ====Try to remove clients w/ less than 30 samples, and remove 0 samples
+2021-12-22:16:49:18,502 INFO     [divide_data.py:509] Raw class per worker is : array([[43., 46., 19., ..., 18., 18., 25.],
+       [46., 32., 15., ..., 13., 21., 44.],
+       [42., 28., 15., ..., 16., 16., 35.],
+       ...,
+       [23., 32., 19., ..., 17., 23., 39.],
+       [40., 41., 15., ...,  5., 30., 36.],
+       [43., 45., 15., ..., 19., 23., 31.]])
+
+2021-12-22:16:49:18,503 INFO     [divide_data.py:510] ========= End of Class/Worker =========
+
+2021-12-22:16:49:18,508 INFO     [learner.py:88] ====Save obs_client====
+2021-12-22:16:49:19,582 INFO     [param_server.py:91] ====Info of all feasible clients {'total_feasible_clients': 100, 'total_length': 62300}
+2021-12-22:16:49:19,593 INFO     [param_server.py:96] ====Save obs_client====
+2021-12-22:16:49:19,843 INFO     [param_server.py:188] ====PS: get in run()
+2021-12-22:16:49:19,843 INFO     [learner.py:748] ==== Starting testing data partitioner =====
+2021-12-22:16:49:19,845 INFO     [divide_data.py:95] ====Initiating DataPartitioner takes 0.0007481575012207031 s
+
+2021-12-22:16:49:19,846 INFO     [learner.py:750] ==== Finished testing data partitioner =====
+2021-12-22:16:49:19,848 INFO     [divide_data.py:388] ========= Start of Random Partition =========
+
+2021-12-22:16:49:19,853 INFO     [divide_data.py:509] Raw class per worker is : array([[ 74.,  70.,  93.,  90.,  71.,  98., 112.,  61., 101., 105.,  73.,
+         92.,  86.,  57.,  49., 102.,  47.,  39.,  93.,  75.]])
+
+2021-12-22:16:49:19,853 INFO     [divide_data.py:510] ========= End of Class/Worker =========
+
+2021-12-22:16:49:19,862 INFO     [learner.py:445] ====Worker: Start running
+2021-12-22:16:49:19,909 INFO     [learner.py:483] 
+Namespace(adam_epsilon=1e-08, adaptive_epoch_beta=1, backend='nccl', batch_size=16, bidirectional=True, blacklist_max_len=0.3, blacklist_rounds=-1, block_size=64, cache_dir=None, capacity_bin=True, clf_block_size=100, client_path='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/data/device_info/client_device_capacity', clip_bound=0.98, clock_factor=6.092057761732853, conf_path='~/dataset/', config_name=None, cut_off_util=0.4, data_dir='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/google_speech', data_mapfile='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/google_speech/clientDataMap', data_set='google_speech', decay_epoch=15.0, decay_factor=0.95, display_step=20, do_eval=False, do_train=False, dropout_high=0.6, dropout_low=0.1, dump_epoch=1000, duplicate_data=1, enable_adapt_local_epoch=False, enable_dropout=False, enable_importance=False, enable_obs_client=True, enable_obs_importance=False, enable_obs_local_epoch=False, enforce_random=True, epochs=2, eval_all_checkpoints=False, eval_data_file='', eval_interval=20, eval_interval_prior=9999999, evaluate_during_training=False, exploration_alpha=0.3, exploration_decay=0.95, exploration_factor=0.9, exploration_min=0.2, filter_class=0, filter_less=30, filter_more=100000.0, finetune=False, fixed_clients=False, force_read=False, forward_pass=False, fp16=False, fp16_opt_level='O1', full_gradient_interval=20, gpu_device=1, gradient_accumulation_steps=1, gradient_policy='yogi', hetero_allocation='1.0-1.0-1.0-1.0-1.0-1.0', heterogeneity=1.0, hidden_layers=7, hidden_size=256, home_path='', input_dim=0, is_even_avg=True, job_name='google_speech', labels_path='labels.json', learners='1', learning_rate=0.04, line_by_line=False, load_epoch=1, load_model=False, load_time_stamp='0615_194942', local_rank=-1, log_path='/mnt/home/lichenni/projects/mobicom22_fl/training/evals', logging_steps=500, loss_decay=0.2, malicious_clients=0, manager_port=46904, max_grad_norm=1.0, max_iter_store=100, max_steps=-1, min_learning_rate=0.0001, mlm=True, mlm_probability=0.1, model='resnet34', model_avg=True, model_name_or_path=None, model_path=None, model_size=65536, model_type='', no_cuda=False, noise_dir=None, noise_factor=0, noise_max=0.5, noise_min=0.0, noise_prob=0.4, num_class=20, num_loaders=2, num_train_epochs=1.0, output_dim=0, output_dir=None, overcommit=1.3, overwrite_cache=False, overwrite_output_dir=False, pacer_delta=30.0, pacer_step=20, per_gpu_eval_batch_size=4, per_gpu_train_batch_size=4, proxy_avg=False, proxy_mu=0.1, ps_ip='dev-amd20-v100', ps_port='55878', read_models_path=False, release_cache=False, resampling_interval=1, rnn_type='lstm', round_penalty=2.0, round_threshold=40.0, run_all=False, sample_mode='random', sample_rate=16000, sample_seed=233, sample_window=5.0, sampler_path=None, save_path='./', save_steps=500, save_total_limit=None, score_mode='loss', seed=42, sequential='0', server_ip='', server_port='', should_continue=False, single_sim=0, skip_partition=False, sleep_up=0, spec_augment=False, speed_volume_perturb=False, stale_threshold=0, task='speech', test_bsz=128, test_interval=20, test_manifest='data/test_manifest.csv', test_only=False, test_ratio=1.0, test_train_data=False, this_rank=1, threads=4, time_stamp='1222_164841_19292', timeout=9999999, to_device='cuda', tokenizer_name=None, total_worker=100, train_data_file='', train_manifest='data/train_manifest.csv', upload_epoch=5, user_trace='/mnt/ufs18/nodr/home/lichenni/projects/FedScale/dataset/data/device_info/client_behave_trace', validate_interval=999999, vocab_tag_size=500, vocab_token_size=10000, warmup_steps=0, weight_decay=0.0, window='hamming', window_size=0.02, window_stride=0.01, yogi_beta=0.999, yogi_beta2=-1, yogi_eta=0.005, yogi_tau=0.001, zipf_alpha='5')
+
+2021-12-22:16:49:20,131 INFO     [learner.py:526] ====Start train round 1
+2021-12-22:16:49:20,428 INFO     [learner.py:164] Start to run client 1 on rank 1...
+====Worker: init_myprocesses
+Begin!
+2021-12-22:16:49:23,281 INFO     [learner.py:439] Completed to run client 1
+2021-12-22:16:49:23,662 INFO     [learner.py:606] ====Pushing takes 0.37845611572265625 s
+2021-12-22:16:49:24,535 INFO     [param_server.py:289] ====Start to merge models
+2021-12-22:16:49:24,665 INFO     [param_server.py:355] ====Done handling rank 1, with ratio 1.0, now collected 1 clients
+2021-12-22:16:49:24,666 INFO     [param_server.py:380] ====After aggregation in epoch: 0, virtual_clock: 0.0, top_1: : 0.0 % (0.0), top_5: : 0.0 % (0.0), test loss: 0.0, test len: 1.0
+2021-12-22:16:49:24,669 INFO     [param_server.py:409] Lock worker 1 with localStep 1 , while globalStep is 1
+
+2021-12-22:16:49:24,670 INFO     [param_server.py:440] ====Epoch 2 completes 1 clients with loss 32.4509131763639, sampled rewards are: 
+ {1: 0.00499252555279387} 
+==========
+2021-12-22:16:49:24,670 INFO     [param_server.py:449] ====Start to sample for epoch 2, global virtualClock: 0.0, round_duration: 0.0
+2021-12-22:16:49:24,672 INFO     [param_server.py:466] ====Try to resample clients, final takes: 
+ [47, 7, 82, 53, 16, 37, 55, 84, 98, 6, 51, 81, 38, 83, 97, 99, 85, 11, 87, 27, 5, 39, 73, 71, 31, 79, 65, 57, 49, 50, 14, 17, 70, 96, 25, 59, 58, 35, 67, 88, 76, 86, 60]
+2021-12-22:16:49:25,232 INFO     [param_server.py:559] Epoch is done: 2
+2021-12-22:16:49:25,251 INFO     [learner.py:667] ====Dump model successfully
+2021-12-22:16:49:25,446 INFO     [learner.py:526] ====Start train round 2
+2021-12-22:16:49:25,551 INFO     [learner.py:164] Start to run client 47 on rank 1...
+2021-12-22:16:49:27,970 INFO     [learner.py:439] Completed to run client 47
+2021-12-22:16:49:28,123 INFO     [learner.py:164] Start to run client 7 on rank 1...
+2021-12-22:16:49:30,774 INFO     [learner.py:439] Completed to run client 7
+2021-12-22:16:49:30,950 INFO     [learner.py:164] Start to run client 82 on rank 1...
+2021-12-22:16:49:33,967 INFO     [learner.py:439] Completed to run client 82
+2021-12-22:16:49:34,130 INFO     [learner.py:164] Start to run client 53 on rank 1...
+2021-12-22:16:49:37,46 INFO     [learner.py:439] Completed to run client 53
+2021-12-22:16:49:37,225 INFO     [learner.py:164] Start to run client 16 on rank 1...
+2021-12-22:16:49:40,781 INFO     [learner.py:439] Completed to run client 16
+2021-12-22:16:49:40,957 INFO     [learner.py:164] Start to run client 37 on rank 1...
+2021-12-22:16:49:43,869 INFO     [learner.py:439] Completed to run client 37
+2021-12-22:16:49:44,55 INFO     [learner.py:164] Start to run client 55 on rank 1...
+2021-12-22:16:49:46,254 INFO     [learner.py:439] Completed to run client 55
+2021-12-22:16:49:46,448 INFO     [learner.py:164] Start to run client 84 on rank 1...
+2021-12-22:16:49:49,149 INFO     [learner.py:439] Completed to run client 84
+2021-12-22:16:49:49,320 INFO     [learner.py:164] Start to run client 98 on rank 1...
+2021-12-22:16:49:52,10 INFO     [learner.py:439] Completed to run client 98
+2021-12-22:16:49:52,193 INFO     [learner.py:164] Start to run client 6 on rank 1...
+2021-12-22:16:49:54,485 INFO     [learner.py:439] Completed to run client 6
+2021-12-22:16:49:54,652 INFO     [learner.py:164] Start to run client 51 on rank 1...
+2021-12-22:16:49:57,484 INFO     [learner.py:439] Completed to run client 51
+2021-12-22:16:49:57,658 INFO     [learner.py:164] Start to run client 81 on rank 1...
+2021-12-22:16:49:59,892 INFO     [learner.py:439] Completed to run client 81
+2021-12-22:16:50:00,77 INFO     [learner.py:164] Start to run client 38 on rank 1...
+2021-12-22:16:50:02,417 INFO     [learner.py:439] Completed to run client 38
+2021-12-22:16:50:02,595 INFO     [learner.py:164] Start to run client 83 on rank 1...
+2021-12-22:16:50:04,889 INFO     [learner.py:439] Completed to run client 83
+2021-12-22:16:50:05,53 INFO     [learner.py:164] Start to run client 97 on rank 1...
+2021-12-22:16:50:07,507 INFO     [learner.py:439] Completed to run client 97
+2021-12-22:16:50:07,673 INFO     [learner.py:164] Start to run client 99 on rank 1...
+2021-12-22:16:50:09,660 INFO     [learner.py:439] Completed to run client 99
+2021-12-22:16:50:09,827 INFO     [learner.py:164] Start to run client 85 on rank 1...
+2021-12-22:16:50:12,551 INFO     [learner.py:439] Completed to run client 85
+2021-12-22:16:50:12,718 INFO     [learner.py:164] Start to run client 11 on rank 1...
+2021-12-22:16:50:15,488 INFO     [learner.py:439] Completed to run client 11
+2021-12-22:16:50:15,660 INFO     [learner.py:164] Start to run client 87 on rank 1...
+2021-12-22:16:50:18,443 INFO     [learner.py:439] Completed to run client 87
+2021-12-22:16:50:18,624 INFO     [learner.py:164] Start to run client 27 on rank 1...
+2021-12-22:16:50:21,48 INFO     [learner.py:439] Completed to run client 27
+2021-12-22:16:50:21,204 INFO     [learner.py:164] Start to run client 5 on rank 1...
+2021-12-22:16:50:23,512 INFO     [learner.py:439] Completed to run client 5
+2021-12-22:16:50:23,687 INFO     [learner.py:164] Start to run client 39 on rank 1...
+2021-12-22:16:50:26,281 INFO     [learner.py:439] Completed to run client 39
+2021-12-22:16:50:26,483 INFO     [learner.py:164] Start to run client 73 on rank 1...
+2021-12-22:16:50:29,206 INFO     [learner.py:439] Completed to run client 73
+2021-12-22:16:50:29,362 INFO     [learner.py:164] Start to run client 71 on rank 1...
+2021-12-22:16:50:32,404 INFO     [learner.py:439] Completed to run client 71
+2021-12-22:16:50:32,612 INFO     [learner.py:164] Start to run client 31 on rank 1...
+2021-12-22:16:50:34,580 INFO     [learner.py:439] Completed to run client 31
+2021-12-22:16:50:34,738 INFO     [learner.py:164] Start to run client 79 on rank 1...
+2021-12-22:16:50:37,830 INFO     [learner.py:439] Completed to run client 79
+2021-12-22:16:50:38,44 INFO     [learner.py:164] Start to run client 65 on rank 1...
+2021-12-22:16:50:40,903 INFO     [learner.py:439] Completed to run client 65
+2021-12-22:16:50:41,76 INFO     [learner.py:164] Start to run client 57 on rank 1...
+2021-12-22:16:50:43,489 INFO     [learner.py:439] Completed to run client 57
+2021-12-22:16:50:43,637 INFO     [learner.py:164] Start to run client 49 on rank 1...
+2021-12-22:16:50:45,856 INFO     [learner.py:439] Completed to run client 49
+2021-12-22:16:50:46,54 INFO     [learner.py:164] Start to run client 50 on rank 1...
+2021-12-22:16:50:48,822 INFO     [learner.py:439] Completed to run client 50
+2021-12-22:16:50:48,986 INFO     [learner.py:164] Start to run client 14 on rank 1...
+2021-12-22:16:50:51,976 INFO     [learner.py:439] Completed to run client 14
+2021-12-22:16:50:52,162 INFO     [learner.py:164] Start to run client 17 on rank 1...
+2021-12-22:16:50:55,65 INFO     [learner.py:439] Completed to run client 17
+2021-12-22:16:50:55,277 INFO     [learner.py:164] Start to run client 70 on rank 1...
+2021-12-22:16:50:58,240 INFO     [learner.py:439] Completed to run client 70
+2021-12-22:16:50:58,436 INFO     [learner.py:164] Start to run client 96 on rank 1...
+2021-12-22:16:51:01,191 INFO     [learner.py:439] Completed to run client 96
+2021-12-22:16:51:01,368 INFO     [learner.py:164] Start to run client 25 on rank 1...
+2021-12-22:16:51:04,265 INFO     [learner.py:439] Completed to run client 25
+2021-12-22:16:51:04,425 INFO     [learner.py:164] Start to run client 59 on rank 1...
+2021-12-22:16:51:07,211 INFO     [learner.py:439] Completed to run client 59
+2021-12-22:16:51:07,396 INFO     [learner.py:164] Start to run client 58 on rank 1...
+2021-12-22:16:51:10,346 INFO     [learner.py:439] Completed to run client 58
+2021-12-22:16:51:10,523 INFO     [learner.py:164] Start to run client 35 on rank 1...
+2021-12-22:16:51:13,621 INFO     [learner.py:439] Completed to run client 35
+2021-12-22:16:51:13,798 INFO     [learner.py:164] Start to run client 67 on rank 1...
+2021-12-22:16:51:16,807 INFO     [learner.py:439] Completed to run client 67
+2021-12-22:16:51:16,980 INFO     [learner.py:164] Start to run client 88 on rank 1...
+2021-12-22:16:51:20,101 INFO     [learner.py:439] Completed to run client 88
+2021-12-22:16:51:20,358 INFO     [learner.py:164] Start to run client 76 on rank 1...
+2021-12-22:16:51:23,137 INFO     [learner.py:439] Completed to run client 76
+2021-12-22:16:51:23,310 INFO     [learner.py:164] Start to run client 86 on rank 1...
+2021-12-22:16:51:25,622 INFO     [learner.py:439] Completed to run client 86
+2021-12-22:16:51:25,791 INFO     [learner.py:164] Start to run client 60 on rank 1...
+2021-12-22:16:51:28,68 INFO     [learner.py:439] Completed to run client 60
+2021-12-22:16:51:36,399 INFO     [learner.py:673] ====Error: 'i' format requires -2147483648 <= number <= 2147483647, <class 'struct.error'>, learner.py, 602
+Traceback (most recent call last):
+  File "/mnt/home/lichenni/projects/mobicom22_fl/training/learner.py", line 769, in <module>
+    run, args.backend, client_cfg)
+  File "/mnt/home/lichenni/projects/mobicom22_fl/training/learner.py", line 106, in init_myprocesses
+    fn(rank, model, q, param_q, stop_flag, client_cfg)
+  File "/mnt/home/lichenni/projects/mobicom22_fl/training/learner.py", line 679, in run
+    queue.put({rank: [None, None, None, True, -1, -1]})
+  File "<string>", line 2, in put
+  File "/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/multiprocessing/managers.py", line 757, in _callmethod
+    kind, result = conn.recv()
+  File "/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/mnt/home/lichenni/anaconda3/envs/oort/lib/python3.6/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
