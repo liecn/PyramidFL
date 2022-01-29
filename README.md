@@ -137,9 +137,9 @@ please cite our paper if you think the source codes are useful in your research 
 
 # Acknowledgements
 
-Thanks to Fan Lai and Xiangfeng Zhu for their OSDI'21 paper [Oort: Efficient Federated Learning via Guided Participant Selection](https://www.usenix.org/conference/osdi21/presentation/lai). The source codes can be found in repo [Oort](https://github.com/SymbioticLab/Oort).
+Thanks to Fan Lai, Xiangfeng Zhu, Harsha V. Madhyastha, and Mosharaf Chowdhury for their OSDI'21 paper [Oort: Efficient Federated Learning via Guided Participant Selection](https://www.usenix.org/conference/osdi21/presentation/lai). The source codes can be found in repo [Oort](https://github.com/SymbioticLab/Oort).
 
-We also appreciate the help from Xiaomin Ouyang with their MobiSys'21 paper [ClusterFL: a similarity-aware federated learning system for human activity recognition](https://dl.acm.org/doi/10.1145/3458864.3467681). The HARBox dataset can be found in repo [FL-Datasets-for-HAR](https://github.com/xmouyang/FL-Datasets-for-HAR).
+We also appreciate the help from Xiaomin Ouyang, Zhiyuan Xie, Jiayu Zhou, Jianwei Huang, and Guoliang Xing for their MobiSys'21 paper [ClusterFL: a similarity-aware federated learning system for human activity recognition](https://dl.acm.org/doi/10.1145/3458864.3467681). The HARBox dataset can be found in repo [FL-Datasets-for-HAR](https://github.com/xmouyang/FL-Datasets-for-HAR).
 
 
 # Contact
