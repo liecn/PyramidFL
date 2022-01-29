@@ -1,8 +1,8 @@
 # PyramidFL
 
 This repository contains scripts and instructions for reproducing the experiments in our MobiCom'22 paper "
-PyramidFL: A Fine-grained Participant Selection Framework forEfficient Federated Learning". 
-<!-- [PyramidFL: A Fine-grained Participant Selection Framework forEfficient Federated Learning](https://www.usenix.org/conference/osdi21/presentation/lai)".  -->
+PyramidFL: Fine-grained Data and System Heterogeneity-aware Client Selection for Efficient Federated Learning". 
+<!-- [PyramidFL: Fine-grained Data and System Heterogeneity-aware Client Selection for Efficient Federated Learning](https://www.usenix.org/conference/osdi21/presentation/lai)".  -->
 
 # Overview
 
