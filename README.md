@@ -16,7 +16,6 @@ PyramidFL: Fine-grained Data and System Heterogeneity-aware Client Selection for
 # Environment Setting
 
 Please run ```install.sh``` to install the following automatically:
-
 * Anaconda Package Manager
 * CUDA 10.2
 
