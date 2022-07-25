@@ -5,9 +5,9 @@ import pickle
 import logging
 
 import sys
-sys.path.insert(0, '/mnt/home/lichenni/projects/Oort/oort')
+sys.path.insert(0, '../../oort')
 from oort import create_training_selector
-sys.path.remove('/mnt/home/lichenni/projects/Oort/oort')
+sys.path.remove('../../oort')
 
 class clientSampler(object):
 
